@@ -1,5 +1,37 @@
 [
   {
+    "ContainingType": "task_service.Controllers.ToDoListController",
+    "Method": "Delete",
+    "RelativePath": "ToDoList",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "task_service.Controllers.ToDoListController",
+    "Method": "Delete2",
+    "RelativePath": "ToDoList",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "task_service.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

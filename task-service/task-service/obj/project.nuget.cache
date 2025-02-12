@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "e/JPUV3Wbsk=",
+  "dgSpecHash": "D4nV3KBFuSc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Дима\\Desktop\\task-service\\task-service\\task-service.csproj",
+  "projectFilePath": "C:\\Users\\Дима\\Desktop\\Diploma-project\\task-service\\task-service\\task-service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Дима\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\Дима\\.nuget\\packages\\microsoft.openapi\\1.6.14\\microsoft.openapi.1.6.14.nupkg.sha512",
