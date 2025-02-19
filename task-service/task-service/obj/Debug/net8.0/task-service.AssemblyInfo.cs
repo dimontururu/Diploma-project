@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("task-service")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+92e0ca74a9cc5125b3fa3f036116b8da335f7dc4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6f9e18ddf220e40b0297e44c8cd6fa954c228476")]
 [assembly: System.Reflection.AssemblyProductAttribute("task-service")]
 [assembly: System.Reflection.AssemblyTitleAttribute("task-service")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
