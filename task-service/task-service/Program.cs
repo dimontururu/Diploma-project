@@ -1,4 +1,5 @@
 
+using task_service.Middlewares;
 using task_service.Model;
 using task_service.UserService;
 
@@ -10,17 +11,21 @@ namespace task_service
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            builder.Services.AddScoped<IUserService,UserService.UserService>();
+            builder.Services.AddTransient<IUserService,UserService.UserService>();
             builder.Services.AddSwaggerGen();
             builder.Services.AddControllers();
 
             var app = builder.Build();
+
+            app.UseMiddleware<ExceptionHandlingMiddleware>();
 
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+
+            app.UseHttpsRedirection();
 
             app.MapControllers();
 

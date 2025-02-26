@@ -1,4 +1,6 @@
-﻿namespace task_service.UserService
+﻿using task_service.DTO;
+
+namespace task_service.UserService
 {
     public interface IUserService
     {

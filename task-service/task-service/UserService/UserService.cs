@@ -1,4 +1,5 @@
 ﻿
+using task_service.DTO;
 using task_service.Model;
 
 namespace task_service.UserService
@@ -15,7 +16,9 @@ namespace task_service.UserService
                 await SaveUser(user);
             }
             else
-            { }    //как отправить обратно ошибку???
+            { 
+                throw new NullReferenceException();
+            }    
         }
 
         public async Task<UserDTO> GetUserDTO(int id)

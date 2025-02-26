@@ -9,7 +9,7 @@
     "Parameters": [
       {
         "Name": "user",
-        "Type": "task_service.NewUserDTO",
+        "Type": "task_service.DTO.NewUserDTO",
         "IsRequired": true
       }
     ],

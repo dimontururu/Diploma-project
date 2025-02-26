@@ -1,4 +1,4 @@
-﻿namespace task_service.UserService
+﻿namespace task_service.DTO
 {
     public class UserDTO
     {

@@ -45,6 +45,10 @@
           "name": {
             "type": "string",
             "nullable": true
+          },
+          "i": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false

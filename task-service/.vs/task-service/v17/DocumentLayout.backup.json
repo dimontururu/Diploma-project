@@ -3,36 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\\u0414\u0438\u043C\u0430\\Desktop\\Diploma-project\\task-service\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{99A5D1C1-1C61-4276-9813-373EBF3813FF}|task-service\\task-service.csproj|c:\\users\\\u0434\u0438\u043C\u0430\\desktop\\diploma-project\\task-service\\task-service\\userservice\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99A5D1C1-1C61-4276-9813-373EBF3813FF}|task-service\\task-service.csproj|solutionrelative:task-service\\userservice\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99A5D1C1-1C61-4276-9813-373EBF3813FF}|task-service\\task-service.csproj|c:\\users\\\u0434\u0438\u043C\u0430\\desktop\\diploma-project\\task-service\\task-service\\userservice\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99A5D1C1-1C61-4276-9813-373EBF3813FF}|task-service\\task-service.csproj|solutionrelative:task-service\\userservice\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{99A5D1C1-1C61-4276-9813-373EBF3813FF}|task-service\\task-service.csproj|c:\\users\\\u0434\u0438\u043C\u0430\\desktop\\diploma-project\\task-service\\task-service\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{99A5D1C1-1C61-4276-9813-373EBF3813FF}|task-service\\task-service.csproj|solutionrelative:task-service\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{99A5D1C1-1C61-4276-9813-373EBF3813FF}|task-service\\task-service.csproj|c:\\users\\\u0434\u0438\u043C\u0430\\desktop\\diploma-project\\task-service\\task-service\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99A5D1C1-1C61-4276-9813-373EBF3813FF}|task-service\\task-service.csproj|solutionrelative:task-service\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{99A5D1C1-1C61-4276-9813-373EBF3813FF}|task-service\\task-service.csproj|c:\\users\\\u0434\u0438\u043C\u0430\\desktop\\diploma-project\\task-service\\task-service\\middlewares\\exceptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99A5D1C1-1C61-4276-9813-373EBF3813FF}|task-service\\task-service.csproj|solutionrelative:task-service\\middlewares\\exceptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{99A5D1C1-1C61-4276-9813-373EBF3813FF}|task-service\\task-service.csproj|c:\\users\\\u0434\u0438\u043C\u0430\\desktop\\diploma-project\\task-service\\task-service\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{99A5D1C1-1C61-4276-9813-373EBF3813FF}|task-service\\task-service.csproj|solutionrelative:task-service\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{99A5D1C1-1C61-4276-9813-373EBF3813FF}|task-service\\task-service.csproj|c:\\users\\\u0434\u0438\u043C\u0430\\desktop\\diploma-project\\task-service\\task-service\\task-service.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{99A5D1C1-1C61-4276-9813-373EBF3813FF}|task-service\\task-service.csproj|solutionrelative:task-service\\task-service.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{99A5D1C1-1C61-4276-9813-373EBF3813FF}|task-service\\task-service.csproj|c:\\users\\\u0434\u0438\u043C\u0430\\desktop\\diploma-project\\task-service\\task-service\\dto\\newuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99A5D1C1-1C61-4276-9813-373EBF3813FF}|task-service\\task-service.csproj|solutionrelative:task-service\\dto\\newuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{99A5D1C1-1C61-4276-9813-373EBF3813FF}|task-service\\task-service.csproj|c:\\users\\\u0434\u0438\u043C\u0430\\desktop\\diploma-project\\task-service\\task-service\\model\\todolistcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99A5D1C1-1C61-4276-9813-373EBF3813FF}|task-service\\task-service.csproj|solutionrelative:task-service\\model\\todolistcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99A5D1C1-1C61-4276-9813-373EBF3813FF}|task-service\\task-service.csproj|c:\\users\\\u0434\u0438\u043C\u0430\\desktop\\diploma-project\\task-service\\task-service\\model\\todolist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99A5D1C1-1C61-4276-9813-373EBF3813FF}|task-service\\task-service.csproj|solutionrelative:task-service\\model\\todolist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99A5D1C1-1C61-4276-9813-373EBF3813FF}|task-service\\task-service.csproj|c:\\users\\\u0434\u0438\u043C\u0430\\desktop\\diploma-project\\task-service\\task-service\\model\\case.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99A5D1C1-1C61-4276-9813-373EBF3813FF}|task-service\\task-service.csproj|solutionrelative:task-service\\model\\case.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99A5D1C1-1C61-4276-9813-373EBF3813FF}|task-service\\task-service.csproj|c:\\users\\\u0434\u0438\u043C\u0430\\desktop\\diploma-project\\task-service\\task-service\\task-service.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{99A5D1C1-1C61-4276-9813-373EBF3813FF}|task-service\\task-service.csproj|solutionrelative:task-service\\task-service.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{99A5D1C1-1C61-4276-9813-373EBF3813FF}|task-service\\task-service.csproj|c:\\users\\\u0434\u0438\u043C\u0430\\desktop\\diploma-project\\task-service\\task-service\\dto\\errordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99A5D1C1-1C61-4276-9813-373EBF3813FF}|task-service\\task-service.csproj|solutionrelative:task-service\\dto\\errordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,99 +50,93 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "task-service",
-              "DocumentMoniker": "C:\\Users\\\u0414\u0438\u043C\u0430\\Desktop\\Diploma-project\\task-service\\task-service\\task-service.csproj",
-              "RelativeDocumentMoniker": "task-service\\task-service.csproj",
-              "ToolTip": "C:\\Users\\\u0414\u0438\u043C\u0430\\Desktop\\Diploma-project\\task-service\\task-service\\task-service.csproj",
-              "RelativeToolTip": "task-service\\task-service.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-02-23T18:38:20.951Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u0438\u043C\u0430\\Desktop\\Diploma-project\\task-service\\task-service\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "task-service\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\\u0414\u0438\u043C\u0430\\Desktop\\Diploma-project\\task-service\\task-service\\Controllers\\UserController.cs*",
-              "RelativeToolTip": "task-service\\Controllers\\UserController.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-23T17:52:10.057Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ToDoList.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u0438\u043C\u0430\\Desktop\\Diploma-project\\task-service\\task-service\\Model\\ToDoList.cs",
-              "RelativeDocumentMoniker": "task-service\\Model\\ToDoList.cs",
-              "ToolTip": "C:\\Users\\\u0414\u0438\u043C\u0430\\Desktop\\Diploma-project\\task-service\\task-service\\Model\\ToDoList.cs",
-              "RelativeToolTip": "task-service\\Model\\ToDoList.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T09:20:52.875Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u0438\u043C\u0430\\Desktop\\Diploma-project\\task-service\\task-service\\Model\\User.cs",
-              "RelativeDocumentMoniker": "task-service\\Model\\User.cs",
-              "ToolTip": "C:\\Users\\\u0414\u0438\u043C\u0430\\Desktop\\Diploma-project\\task-service\\task-service\\Model\\User.cs",
-              "RelativeToolTip": "task-service\\Model\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T09:20:18.493Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Case.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u0438\u043C\u0430\\Desktop\\Diploma-project\\task-service\\task-service\\Model\\Case.cs",
-              "RelativeDocumentMoniker": "task-service\\Model\\Case.cs",
-              "ToolTip": "C:\\Users\\\u0414\u0438\u043C\u0430\\Desktop\\Diploma-project\\task-service\\task-service\\Model\\Case.cs",
-              "RelativeToolTip": "task-service\\Model\\Case.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T09:19:47.279Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ToDoListContext.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u0438\u043C\u0430\\Desktop\\Diploma-project\\task-service\\task-service\\Model\\ToDoListContext.cs",
-              "RelativeDocumentMoniker": "task-service\\Model\\ToDoListContext.cs",
-              "ToolTip": "C:\\Users\\\u0414\u0438\u043C\u0430\\Desktop\\Diploma-project\\task-service\\task-service\\Model\\ToDoListContext.cs",
-              "RelativeToolTip": "task-service\\Model\\ToDoListContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T09:19:30.817Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "task-service.csproj",
-              "DocumentMoniker": "C:\\Users\\\u0414\u0438\u043C\u0430\\Desktop\\Diploma-project\\task-service\\task-service\\task-service.csproj",
-              "RelativeDocumentMoniker": "task-service\\task-service.csproj",
-              "ToolTip": "C:\\Users\\\u0414\u0438\u043C\u0430\\Desktop\\Diploma-project\\task-service\\task-service\\task-service.csproj",
-              "RelativeToolTip": "task-service\\task-service.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-02-17T18:41:29.78Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\\u0414\u0438\u043C\u0430\\Desktop\\Diploma-project\\task-service\\task-service\\Program.cs",
               "RelativeDocumentMoniker": "task-service\\Program.cs",
               "ToolTip": "C:\\Users\\\u0414\u0438\u043C\u0430\\Desktop\\Diploma-project\\task-service\\task-service\\Program.cs",
               "RelativeToolTip": "task-service\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T22:30:47.511Z"
+              "WhenOpened": "2025-02-24T19:40:06.093Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ExceptionHandlingMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u0438\u043C\u0430\\Desktop\\Diploma-project\\task-service\\task-service\\Middlewares\\ExceptionHandlingMiddleware.cs",
+              "RelativeDocumentMoniker": "task-service\\Middlewares\\ExceptionHandlingMiddleware.cs",
+              "ToolTip": "C:\\Users\\\u0414\u0438\u043C\u0430\\Desktop\\Diploma-project\\task-service\\task-service\\Middlewares\\ExceptionHandlingMiddleware.cs",
+              "RelativeToolTip": "task-service\\Middlewares\\ExceptionHandlingMiddleware.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T19:11:18.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ErrorDTO.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u0438\u043C\u0430\\Desktop\\Diploma-project\\task-service\\task-service\\DTO\\ErrorDTO.cs",
+              "RelativeDocumentMoniker": "task-service\\DTO\\ErrorDTO.cs",
+              "ToolTip": "C:\\Users\\\u0414\u0438\u043C\u0430\\Desktop\\Diploma-project\\task-service\\task-service\\DTO\\ErrorDTO.cs",
+              "RelativeToolTip": "task-service\\DTO\\ErrorDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T19:05:40.446Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u0438\u043C\u0430\\Desktop\\Diploma-project\\task-service\\task-service\\UserService\\UserService.cs",
+              "RelativeDocumentMoniker": "task-service\\UserService\\UserService.cs",
+              "ToolTip": "C:\\Users\\\u0414\u0438\u043C\u0430\\Desktop\\Diploma-project\\task-service\\task-service\\UserService\\UserService.cs*",
+              "RelativeToolTip": "task-service\\UserService\\UserService.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T14:53:47.78Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u0438\u043C\u0430\\Desktop\\Diploma-project\\task-service\\task-service\\UserService\\IUserService.cs",
+              "RelativeDocumentMoniker": "task-service\\UserService\\IUserService.cs",
+              "ToolTip": "C:\\Users\\\u0414\u0438\u043C\u0430\\Desktop\\Diploma-project\\task-service\\task-service\\UserService\\IUserService.cs",
+              "RelativeToolTip": "task-service\\UserService\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T14:41:29.523Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "NewUserDTO.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u0438\u043C\u0430\\Desktop\\Diploma-project\\task-service\\task-service\\DTO\\NewUserDTO.cs",
+              "RelativeDocumentMoniker": "task-service\\DTO\\NewUserDTO.cs",
+              "ToolTip": "C:\\Users\\\u0414\u0438\u043C\u0430\\Desktop\\Diploma-project\\task-service\\task-service\\DTO\\NewUserDTO.cs",
+              "RelativeToolTip": "task-service\\DTO\\NewUserDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T14:35:20.491Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u0438\u043C\u0430\\Desktop\\Diploma-project\\task-service\\task-service\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "task-service\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\\u0414\u0438\u043C\u0430\\Desktop\\Diploma-project\\task-service\\task-service\\Controllers\\UserController.cs",
+              "RelativeToolTip": "task-service\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T17:52:10.057Z",
+              "EditorCaption": ""
             }
           ]
         }
