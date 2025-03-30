@@ -46,9 +46,13 @@
             "type": "string",
             "nullable": true
           },
-          "i": {
-            "type": "integer",
-            "format": "int32"
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "type_id": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

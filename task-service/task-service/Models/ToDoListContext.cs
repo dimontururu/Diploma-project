@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace task_service.Model;
+namespace task_service.Models;
 
 public partial class ToDoListContext : DbContext
 {
@@ -19,13 +19,17 @@ public partial class ToDoListContext : DbContext
 
     public virtual DbSet<Case> Cases { get; set; }
 
+    public virtual DbSet<ClientType> ClientTypes { get; set; }
+
+    public virtual DbSet<IdClient> IdClients { get; set; }
+
     public virtual DbSet<ToDoList> ToDoLists { get; set; }
 
     public virtual DbSet<User> Users { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseNpgsql("host=localhost; port=5432; database=to-do list; username=postgres; password=admin");
+        => optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=to_do_list;Username=postgres;Password=admin");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -62,6 +66,42 @@ public partial class ToDoListContext : DbContext
                 .HasColumnName("status");
         });
 
+        modelBuilder.Entity<ClientType>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("client_type_pkey");
+
+            entity.ToTable("client_type");
+
+            entity.Property(e => e.Id)
+                .HasDefaultValueSql("gen_random_uuid()")
+                .HasColumnName("id");
+            entity.Property(e => e.Type)
+                .HasMaxLength(20)
+                .HasColumnName("type");
+        });
+
+        modelBuilder.Entity<IdClient>(entity =>
+        {
+            entity.HasKey(e => new { e.IdClient1, e.IdUser }).HasName("id_client_pkey");
+
+            entity.ToTable("id_client");
+
+            entity.Property(e => e.IdClient1)
+                .HasMaxLength(20)
+                .HasColumnName("id_client");
+            entity.Property(e => e.IdUser).HasColumnName("id_user");
+            entity.Property(e => e.IdClientType).HasColumnName("id_client_type");
+
+            entity.HasOne(d => d.IdClientTypeNavigation).WithMany(p => p.IdClients)
+                .HasForeignKey(d => d.IdClientType)
+                .HasConstraintName("id_client_id_client_type_fkey");
+
+            entity.HasOne(d => d.IdUserNavigation).WithMany(p => p.IdClients)
+                .HasForeignKey(d => d.IdUser)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("id_client_id_user_fkey");
+        });
+
         modelBuilder.Entity<ToDoList>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("to-do_list_pkey");
@@ -91,7 +131,7 @@ public partial class ToDoListContext : DbContext
         {
             entity.HasKey(e => e.Id).HasName("User_pkey");
 
-            entity.ToTable("User");
+            entity.ToTable("user");
 
             entity.Property(e => e.Id)
                 .HasDefaultValueSql("gen_random_uuid()")

@@ -1,6 +1,6 @@
 ﻿
 using task_service.DTO;
-using task_service.Model;
+using task_service.Models;
 
 namespace task_service.UserService
 {
@@ -12,8 +12,10 @@ namespace task_service.UserService
         {
             if (CheckForNull(userDTO))
             {
-                var user = FromNewUserDTOToUser(userDTO);
+                var user = CreateNewUser(userDTO);
                 await SaveUser(user);
+                var idClients = CreateIdClient(user, userDTO);
+                await SaveIdClient(idClients);
             }
             else
             { 
@@ -37,17 +39,43 @@ namespace task_service.UserService
             return true;
         }
 
-        private User FromNewUserDTOToUser(NewUserDTO userDTO)
+        private User CreateNewUser(NewUserDTO userDTO)
         {
             var user = new User();
             user.Name = userDTO.Name;
             return user;
         }
 
+        private IdClient CreateIdClient(User user,NewUserDTO userDto)
+        {
+            var idClient = new IdClient();
+            idClient.IdClient1 = userDto.Id;
+            idClient.IdUser = user.Id;
+
+            using(var db = new ToDoListContext())
+            {
+                foreach(var item in db.ClientTypes)
+                    if(item.Type == userDto.type_id)
+                    {
+                        idClient.IdClientType = item.Id;
+                        break;
+                    }
+            }
+
+            return idClient;
+        }
+
         private async Task SaveUser(User user)
         {
             var db = new ToDoListContext();
             await db.Users.AddAsync(user);
+            await db.SaveChangesAsync();
+        }
+
+        private async Task SaveIdClient(IdClient idClient)
+        {
+            var db = new ToDoListContext();
+            await db.IdClients.AddAsync(idClient);
             await db.SaveChangesAsync();
         }
     }

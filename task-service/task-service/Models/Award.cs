@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace task_service.Model;
+namespace task_service.Models;
 
 public partial class Award
 {

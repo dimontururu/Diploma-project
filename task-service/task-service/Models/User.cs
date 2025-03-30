@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace task_service.Model;
+namespace task_service.Models;
 
 public partial class User
 {
     public Guid Id { get; set; }
 
     public string Name { get; set; } = null!;
+
+    public virtual ICollection<IdClient> IdClients { get; set; } = new List<IdClient>();
 
     public virtual ICollection<ToDoList> ToDoLists { get; set; } = new List<ToDoList>();
 

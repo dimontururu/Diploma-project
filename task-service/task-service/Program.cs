@@ -1,6 +1,5 @@
 
 using task_service.Middlewares;
-using task_service.Model;
 using task_service.UserService;
 
 namespace task_service
