@@ -6,7 +6,11 @@ namespace task_service.UserService
 {
     public class UserService:IUserService
     {
-        public UserService() { }
+        private ToDoListContext _dbContext;
+        public UserService(ToDoListContext db) 
+        {
+            _dbContext = db;
+        }
 
         public async Task CreateUser(NewUserDTO userDTO)
         {
@@ -52,31 +56,26 @@ namespace task_service.UserService
             idClient.IdClient1 = userDto.Id;
             idClient.IdUser = user.Id;
 
-            using(var db = new ToDoListContext())
-            {
-                foreach(var item in db.ClientTypes)
-                    if(item.Type == userDto.type_id)
-                    {
-                        idClient.IdClientType = item.Id;
-                        break;
-                    }
-            }
-
+            foreach(var item in _dbContext.ClientTypes)
+                if(item.Type == userDto.type_id)
+                {
+                    idClient.IdClientType = item.Id;
+                    break;
+                }
+            
             return idClient;
         }
 
         private async Task SaveUser(User user)
         {
-            var db = new ToDoListContext();
-            await db.Users.AddAsync(user);
-            await db.SaveChangesAsync();
+            await _dbContext.Users.AddAsync(user);
+            await _dbContext.SaveChangesAsync();
         }
 
         private async Task SaveIdClient(IdClient idClient)
         {
-            var db = new ToDoListContext();
-            await db.IdClients.AddAsync(idClient);
-            await db.SaveChangesAsync();
+            await _dbContext.IdClients.AddAsync(idClient);
+            await _dbContext.SaveChangesAsync();
         }
     }
 }
