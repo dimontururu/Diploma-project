@@ -1,5 +1,7 @@
 
+using Microsoft.EntityFrameworkCore;
 using task_service.Middlewares;
+using task_service.Models;
 using task_service.UserService;
 
 namespace task_service
@@ -11,6 +13,7 @@ namespace task_service
             var builder = WebApplication.CreateBuilder(args);
 
             builder.Services.AddTransient<IUserService,UserService.UserService>();
+            builder.Services.AddDbContext<ToDoListContext>(options=> options.UseNpgsql(Environment.GetEnvironmentVariable("ConnectionString")));
             builder.Services.AddSwaggerGen();
             builder.Services.AddControllers();
 
