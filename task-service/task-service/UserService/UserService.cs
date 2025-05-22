@@ -15,7 +15,7 @@ namespace task_service.UserService
 
         public async Task CreateUser(NewUserDTO userDTO)
         {
-            if (CheckForNull(userDTO))
+            if (!DtoValidator.HasEmptyValues(userDTO))
             {
                 var user = CreateNewUser(userDTO);
                 await SaveUser(user);
@@ -24,24 +24,13 @@ namespace task_service.UserService
             }
             else
             { 
-                throw new NullReferenceException();
+                throw new NullReferenceException("При создание пользователя поступили пустые данные");
             }    
         }
 
         public async Task<UserDTO> GetUserDTO(int id)
         {
             return null;
-        }
-
-        private bool CheckForNull(NewUserDTO userDTO)
-        {
-            if (userDTO == null)
-                return false;
-
-            if(userDTO.Name== null)
-                return false;
-            
-            return true;
         }
 
         private User CreateNewUser(NewUserDTO userDTO)
