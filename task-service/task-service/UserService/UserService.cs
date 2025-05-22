@@ -18,8 +18,8 @@ namespace task_service.UserService
             if (!DtoValidator.HasEmptyValues(userDTO))
             {
                 var user = CreateNewUser(userDTO);
-                await SaveUser(user);
                 var idClients = CreateIdClient(user, userDTO);
+                await SaveUser(user);
                 await SaveIdClient(idClients);
             }
             else
@@ -46,12 +46,17 @@ namespace task_service.UserService
             idClient.IdClient1 = userDto.Id;
             idClient.IdUser = user.Id;
             
+            bool idFound = false;
             foreach(var item in _DB.ClientTypes)
                 if(item.Type == userDto.type_id)
                 {
                     idClient.IdClientType = item.Id;
+                    idFound = true;
                     break;
                 }
+
+            if (!idFound)
+                throw new Exception("idClient не найден");
 
             return idClient;
         }
