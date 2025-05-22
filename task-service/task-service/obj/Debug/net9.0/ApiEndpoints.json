@@ -1,6 +1,6 @@
 [
   {
-    "ContainingType": "task_service.Controllers.UserController",
+    "ContainingType": "task_service.Presentation.Controllers.UserController",
     "Method": "CreateUser",
     "RelativePath": "api/User",
     "HttpMethod": "POST",
@@ -9,7 +9,7 @@
     "Parameters": [
       {
         "Name": "user",
-        "Type": "task_service.DTO.NewUserDTO",
+        "Type": "task_service.Application.DTOs.NewUserDTO",
         "IsRequired": true
       }
     ],

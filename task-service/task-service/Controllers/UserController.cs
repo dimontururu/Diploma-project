@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using task_service.DTO;
-using task_service.UserService;
+﻿using task_service.Application.Services;
+using task_service.Application.DTOs;
+using Microsoft.AspNetCore.Mvc;
 
-namespace task_service.Controllers
+namespace task_service.Presentation.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
