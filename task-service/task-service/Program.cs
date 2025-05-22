@@ -15,7 +15,7 @@ namespace task_service.Presentation
             var builder = WebApplication.CreateBuilder(args);
 
             builder.Services.AddTransient<IUserService,UserService>();
-            builder.Services.AddDbContext<ToDoListContext>(options=> options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+            builder.Services.AddDbContext<ToDoListContext>(options=> options.UseNpgsql(Environment.GetEnvironmentVariable("ConnectionString")));
             builder.Services.AddScoped<IUserRepository, UserRepository>();
             builder.Services.AddScoped<IIdClientRepository,IdClientRepository>();
             builder.Services.AddScoped<IClientTypeRepository, ClientTypeRepository>();
