@@ -1,6 +1,6 @@
 ﻿using task_service.Domain.Entities;
 
-namespace task_service.Domain.Interfaces
+namespace task_service.Domain.Interfaces.IRepository
 { 
     public interface IClientTypeRepository
     {

@@ -22,6 +22,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastru
 		{B04A019D-36D7-41F4-95CF-BF2DF6F8C517} = {B04A019D-36D7-41F4-95CF-BF2DF6F8C517}
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task_service", "task_service", "{36D591C7-65C7-A0D1-1CBC-10CDE441BDC8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{99A5D1C1-1C61-4276-9813-373EBF3813FF} = {36D591C7-65C7-A0D1-1CBC-10CDE441BDC8}
+		{A2D75653-8AAD-4049-A926-9838DFAA3FBB} = {36D591C7-65C7-A0D1-1CBC-10CDE441BDC8}
+		{B04A019D-36D7-41F4-95CF-BF2DF6F8C517} = {36D591C7-65C7-A0D1-1CBC-10CDE441BDC8}
+		{80E18D2D-1B22-4241-A656-1A979058C59F} = {36D591C7-65C7-A0D1-1CBC-10CDE441BDC8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3BBE7911-388A-44FE-A79C-0516121A920C}

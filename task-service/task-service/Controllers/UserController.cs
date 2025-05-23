@@ -1,6 +1,6 @@
-﻿using task_service.Application.Services;
-using task_service.Application.DTOs;
+﻿using task_service.Application.DTOs;
 using Microsoft.AspNetCore.Mvc;
+using task_service.Application.Interfaces.Services;
 
 namespace task_service.Presentation.Controllers
 {

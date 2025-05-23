@@ -1,10 +1,7 @@
-using Microsoft.EntityFrameworkCore;
-using task_service.Application.Services;
-using task_service.Domain.Interfaces;
-using task_service.Infrastructure.Data;
 using task_service.Infrastructure.Middlewares;
-using task_service.Infrastructure.Data.Repositories;
-using Infrastructure.Data.Repositories;
+using task_service.Infrastructure;
+using task_service.Application;
+using task_service.Domain;
 
 namespace task_service.Presentation
 {
@@ -14,11 +11,10 @@ namespace task_service.Presentation
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            builder.Services.AddTransient<IUserService,UserService>();
-            builder.Services.AddDbContext<ToDoListContext>(options=> options.UseNpgsql(Environment.GetEnvironmentVariable("ConnectionString")));
-            builder.Services.AddScoped<IUserRepository, UserRepository>();
-            builder.Services.AddScoped<IIdClientRepository,IdClientRepository>();
-            builder.Services.AddScoped<IClientTypeRepository, ClientTypeRepository>();
+            builder.Services.AddApplication();
+            builder.Services.AddDomain();
+            builder.Services.AddInfrastructure();
+
             builder.Services.AddSwaggerGen();
             builder.Services.AddControllers();
 

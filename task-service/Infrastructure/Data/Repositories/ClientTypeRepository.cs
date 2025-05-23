@@ -1,7 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System.Net.Sockets;
+﻿using task_service.Domain.Interfaces.IRepository;
+using Microsoft.EntityFrameworkCore;
 using task_service.Domain.Entities;
-using task_service.Domain.Interfaces;
 
 namespace task_service.Infrastructure.Data.Repositories
 {

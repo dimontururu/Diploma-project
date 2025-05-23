@@ -1,7 +1,8 @@
-﻿using task_service.Application.DTOs;
+﻿using task_service.Application.Interfaces.Services;
+using task_service.Domain.Interfaces.IRepository;
+using task_service.Application.DTOs;
 using task_service.Application.Validators;
 using task_service.Domain.Entities;
-using task_service.Domain.Interfaces;
 
 namespace task_service.Application.Services
 {

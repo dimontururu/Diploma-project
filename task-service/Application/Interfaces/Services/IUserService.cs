@@ -1,7 +1,6 @@
-﻿
-using task_service.Application.DTOs;
+﻿using task_service.Application.DTOs;
 
-namespace task_service.Application.Services
+namespace task_service.Application.Interfaces.Services
 {
     public interface IUserService
     {

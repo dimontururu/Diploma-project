@@ -1,5 +1,5 @@
-﻿using task_service.Domain.Entities;
-using task_service.Domain.Interfaces;
+﻿using task_service.Domain.Interfaces.IRepository;
+using task_service.Domain.Entities;
 
 namespace task_service.Infrastructure.Data.Repositories
 {
