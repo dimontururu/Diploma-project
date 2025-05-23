@@ -1,8 +1,7 @@
 ﻿using task_service.Domain.Entities;
 using task_service.Domain.Interfaces;
-using task_service.Infrastructure.Data;
 
-namespace Infrastructure.Data.Repositories
+namespace task_service.Infrastructure.Data.Repositories
 {
     public class IdClientRepository : IIdClientRepository
     {
