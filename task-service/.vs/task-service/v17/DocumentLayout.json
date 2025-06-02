@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Diploma-project\\task-service\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{80E18D2D-1B22-4241-A656-1A979058C59F}|Infrastructure\\Infrastructure.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\diploma-project\\task-service\\infrastructure\\registrationinfrastructure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80E18D2D-1B22-4241-A656-1A979058C59F}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\registrationinfrastructure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{99A5D1C1-1C61-4276-9813-373EBF3813FF}|task-service\\Presentation.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\diploma-project\\task-service\\task-service\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{99A5D1C1-1C61-4276-9813-373EBF3813FF}|task-service\\Presentation.csproj|solutionrelative:task-service\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80E18D2D-1B22-4241-A656-1A979058C59F}|Infrastructure\\Infrastructure.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\diploma-project\\task-service\\infrastructure\\jwt\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80E18D2D-1B22-4241-A656-1A979058C59F}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\jwt\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99A5D1C1-1C61-4276-9813-373EBF3813FF}|task-service\\Presentation.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\diploma-project\\task-service\\task-service\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99A5D1C1-1C61-4276-9813-373EBF3813FF}|task-service\\Presentation.csproj|solutionrelative:task-service\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,21 +26,59 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Diploma-project\\task-service\\task-service\\Program.cs",
               "RelativeDocumentMoniker": "task-service\\Program.cs",
               "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Diploma-project\\task-service\\task-service\\Program.cs",
               "RelativeToolTip": "task-service\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-23T06:37:17.845Z",
               "IsPinned": true,
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RegistrationInfrastructure.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Diploma-project\\task-service\\Infrastructure\\RegistrationInfrastructure.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\RegistrationInfrastructure.cs",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Diploma-project\\task-service\\Infrastructure\\RegistrationInfrastructure.cs*",
+              "RelativeToolTip": "Infrastructure\\RegistrationInfrastructure.cs*",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB0AAABrAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T08:18:22.355Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "JwtService.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Diploma-project\\task-service\\Infrastructure\\JWT\\JwtService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\JWT\\JwtService.cs",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Diploma-project\\task-service\\Infrastructure\\JWT\\JwtService.cs",
+              "RelativeToolTip": "Infrastructure\\JWT\\JwtService.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAABgAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T08:16:16.964Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Diploma-project\\task-service\\task-service\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "task-service\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Diploma-project\\task-service\\task-service\\Controllers\\UserController.cs",
+              "RelativeToolTip": "task-service\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T11:18:45.548Z"
             }
           ]
         }

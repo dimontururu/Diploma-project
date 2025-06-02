@@ -13,7 +13,7 @@ namespace task_service.Presentation
 
             builder.Services.AddApplication();
             builder.Services.AddDomain();
-            builder.Services.AddInfrastructure();
+            builder.Services.AddInfrastructure(builder.Configuration);
 
             builder.Services.AddSwaggerGen();
             builder.Services.AddControllers();

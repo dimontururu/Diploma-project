@@ -1,6 +1,7 @@
 ﻿using task_service.Application.DTOs;
 using Microsoft.AspNetCore.Mvc;
 using task_service.Application.Interfaces.Services;
+using task_service.Application.Interfaces;
 
 namespace task_service.Presentation.Controllers
 {
@@ -8,18 +9,23 @@ namespace task_service.Presentation.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        private IUserService _userService;
-        public UserController(IUserService userService) 
+        private readonly IUserService _userService;
+        private readonly ITokenService _tokenService;
+
+        public UserController(IUserService userService, ITokenService tokenService) 
         {
             _userService = userService;
+            _tokenService = tokenService;
         }
 
         [HttpPost]
-        public async Task<ActionResult> CreateUser(NewUserDTO user)
+        public async Task<ActionResult> CreateUser(NewUserDTO userDTO)
         {
-            await _userService.CreateUser(user);
+            var user = await _userService.CreateUser(userDTO);
 
-            return Ok();
+            var token = _tokenService.GenerateToken(user);
+
+            return Ok(token);
         }
     }
 }

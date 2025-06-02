@@ -3,6 +3,7 @@ using task_service.Domain.Interfaces.IRepository;
 using task_service.Application.DTOs;
 using task_service.Application.Validators;
 using task_service.Domain.Entities;
+using task_service.Application.Interfaces;
 
 namespace task_service.Application.Services
 {
@@ -11,18 +12,21 @@ namespace task_service.Application.Services
         private readonly IUserRepository _userRepository;
         private readonly IIdClientRepository _idClientRepository;
         private readonly IClientTypeRepository _clientTypeRepository;
+        private readonly ITokenService _tokenService;
 
         public UserService(
             IUserRepository userRepository,
             IIdClientRepository idClientRepository,
-            IClientTypeRepository clientTypeRepository)
+            IClientTypeRepository clientTypeRepository,
+            ITokenService tokenService)
         {
             _userRepository = userRepository;
             _idClientRepository = idClientRepository;
             _clientTypeRepository = clientTypeRepository;
+            _tokenService = tokenService;
         }
 
-        public async Task CreateUser(NewUserDTO userDTO)
+        public async Task<User> CreateUser(NewUserDTO userDTO)
         {
             if (DtoValidator.HasEmptyValues(userDTO))
                 throw new ArgumentException("При создании пользователя поступили пустые данные");
@@ -42,6 +46,8 @@ namespace task_service.Application.Services
             };
 
             await _idClientRepository.AddAsync(idClient);
+
+            return user;
         }
 
         public async Task<UserDTO> GetUserDTO(int id)
