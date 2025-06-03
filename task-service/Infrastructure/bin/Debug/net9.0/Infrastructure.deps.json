@@ -361,14 +361,7 @@
       },
       "System.Reflection.Metadata/8.0.1": {},
       "System.Text.Encodings.Web/8.0.0": {},
-      "System.Text.Json/9.0.5": {
-        "runtime": {
-          "lib/net9.0/System.Text.Json.dll": {
-            "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.525.21509"
-          }
-        }
-      },
+      "System.Text.Json/9.0.5": {},
       "Application/1.0.0": {
         "dependencies": {
           "Domain": "1.0.0",

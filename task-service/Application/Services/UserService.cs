@@ -26,7 +26,7 @@ namespace task_service.Application.Services
             _tokenService = tokenService;
         }
 
-        public async Task<User> CreateUser(NewUserDTO userDTO)
+        public async Task<User> CreateUser(UserDTO userDTO)
         {
             if (DtoValidator.HasEmptyValues(userDTO))
                 throw new ArgumentException("При создании пользователя поступили пустые данные");
@@ -50,20 +50,24 @@ namespace task_service.Application.Services
             return user;
         }
 
-        public async Task<UserDTO> GetUserDTO(int id)
+        public async Task<User> GetUser(UserDTO userDTO)
         {
-            //var user = await _userRepository.GetByIdAsync(id)
-            //    ?? throw new KeyNotFoundException("Пользователь не найден");
+            if (DtoValidator.HasEmptyValues(userDTO))
+                throw new ArgumentException("При авторизации пользователя поступили пустые данные");
 
-            //return new UserDTO
-            //{
-            //    Id = user.Id,
-            //    Name = user.Name
-            //};
-            return null;
+            ClientType clientType = await _clientTypeRepository.GetByTypeAsync(userDTO.type_id)
+                ?? throw new KeyNotFoundException("Тип клиента не найден");
+
+            IdClient idClient = await _idClientRepository.GetAsync(clientType.Id,userDTO.Id)
+                ?? throw new KeyNotFoundException("id типа клиента не найден");
+
+            User user = await _userRepository.GetAsync(idClient.IdUser)
+                ?? throw new KeyNotFoundException("Пользователь не найден");
+
+            return user;
         }
 
-        private User CreateNewUser(NewUserDTO userDTO)
+        private User CreateNewUser(UserDTO userDTO)
         {
             return new User { Name = userDTO.Name };
         }

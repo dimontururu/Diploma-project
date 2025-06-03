@@ -16,5 +16,10 @@ namespace task_service.Infrastructure.Data.Repositories
             await _DB.IdClients.AddAsync(idClient);
             await _DB.SaveChangesAsync();
         }
+
+        public async Task<IdClient> GetAsync(Guid IdClientType, string IdClient)
+        {
+            return await _DB.IdClients.FindAsync(IdClient, IdClientType);
+        }
     }
 }

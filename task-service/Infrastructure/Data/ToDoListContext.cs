@@ -77,7 +77,7 @@ public partial class ToDoListContext : DbContext
 
         modelBuilder.Entity<IdClient>(entity =>
         {
-            entity.HasKey(e => new { e.IdClient1, e.IdUser }).HasName("id_client_pkey");
+            entity.HasKey(e => new { e.IdClient1, e.IdClientType }).HasName("id_client_pkey");
 
             entity.ToTable("id_client");
 

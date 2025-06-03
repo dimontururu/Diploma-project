@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "task_service.Controllers.AuthController",
+    "Method": "authorization",
+    "RelativePath": "api/Auth/authorization",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "authorizationDTO",
+        "Type": "task_service.Application.DTOs.UserDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "task_service.Presentation.Controllers.UserController",
     "Method": "CreateUser",
     "RelativePath": "api/User",
@@ -9,10 +25,20 @@
     "Parameters": [
       {
         "Name": "userDTO",
-        "Type": "task_service.Application.DTOs.NewUserDTO",
+        "Type": "task_service.Application.DTOs.UserDTO",
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "task_service.Presentation.Controllers.UserController",
+    "Method": "GetUser",
+    "RelativePath": "api/User",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   }
 ]

@@ -5,7 +5,7 @@ namespace task_service.Application.Interfaces.Services
 {
     public interface IUserService
     {
-        Task<User> CreateUser(NewUserDTO user);
-        Task<UserDTO> GetUserDTO(int id);//разобраться как тг хранит пользователей
+        Task<User> CreateUser(UserDTO user);
+        Task<User> GetUser(UserDTO user);//разобраться как тг хранит пользователей
     }
 }

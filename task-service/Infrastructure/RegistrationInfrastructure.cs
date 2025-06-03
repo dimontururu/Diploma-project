@@ -1,14 +1,14 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using task_service.Application.Interfaces;
 using task_service.Domain.Interfaces.IRepository;
 using task_service.Infrastructure.Data;
 using task_service.Infrastructure.Data.Repositories;
-using Microsoft.EntityFrameworkCore;
-using task_service.Application.Interfaces;
 using task_service.Infrastructure.JWT;
-using Microsoft.Extensions.Configuration;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
-using System.Text;
 
 namespace task_service.Infrastructure
 {
@@ -20,7 +20,8 @@ namespace task_service.Infrastructure
                 AddScoped<IUserRepository, UserRepository>().
                 AddScoped<IIdClientRepository, IdClientRepository>().
                 AddScoped<IClientTypeRepository, ClientTypeRepository>().
-                AddDbContext<ToDoListContext>(options => options.UseNpgsql(Environment.GetEnvironmentVariable("ConnectionString")));
+                AddDbContext<ToDoListContext>(options => options.UseNpgsql(Environment.GetEnvironmentVariable("ConnectionString"))).
+                AddTransient<ITokenService, JwtService>(); ;
 
             services.Configure<JwtSettings>(options =>
             {
@@ -43,8 +44,8 @@ namespace task_service.Infrastructure
                         ValidateAudience = true,
                         ValidateLifetime = true,
                         ValidateIssuerSigningKey = true,
-                        ValidIssuer = config["Jwt:Issuer"],
-                        ValidAudience = config["Jwt:Audience"],
+                        ValidIssuer = Environment.GetEnvironmentVariable("JWT__ISSUER"),
+                        ValidAudience = Environment.GetEnvironmentVariable("JWT__AUDIENCE"),
                         IssuerSigningKey = new SymmetricSecurityKey(
                             Encoding.UTF8.GetBytes(jwtSecret))
                     };

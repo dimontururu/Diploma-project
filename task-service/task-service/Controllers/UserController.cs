@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using task_service.Application.Interfaces.Services;
 using task_service.Application.Interfaces;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 namespace task_service.Presentation.Controllers
 {
@@ -19,13 +21,21 @@ namespace task_service.Presentation.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> CreateUser(NewUserDTO userDTO)
+        public async Task<ActionResult> CreateUser(UserDTO userDTO)
         {
             var user = await _userService.CreateUser(userDTO);
 
             var token = _tokenService.GenerateToken(user);
 
             return Ok(token);
+        }
+
+        [Authorize]
+        [HttpGet]
+        public async Task<ActionResult> GetUser()
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            return Ok(userId);
         }
     }
 }
