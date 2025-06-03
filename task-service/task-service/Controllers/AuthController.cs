@@ -4,7 +4,7 @@ using task_service.Application.Interfaces;
 using task_service.Application.Interfaces.Services;
 using task_service.Domain.Entities;
 
-namespace task_service.Controllers
+namespace ttask_service.Presentation.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -22,8 +22,8 @@ namespace task_service.Controllers
         [HttpPost("authorization")]
         public async Task<IActionResult> authorization(UserDTO authorizationDTO ) 
         {
-            User user = await _userService.GetUser(authorizationDTO);
-            var token = _tokenService.GenerateToken(user);
+            await _userService.GetUser(authorizationDTO);
+            var token = _tokenService.GenerateToken(authorizationDTO);
             return Ok(token);
         }
     }

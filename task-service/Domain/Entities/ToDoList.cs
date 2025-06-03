@@ -6,11 +6,9 @@ public partial class ToDoList
 
     public string Name { get; set; } = null!;
 
-    public Guid IdTask { get; set; }
-
     public Guid? IdUser { get; set; }
 
-    public virtual Case IdTaskNavigation { get; set; } = null!;
+    public virtual ICollection<Case> cases { get; set; } = new List<Case>();
 
     public virtual User? IdUserNavigation { get; set; }
 }

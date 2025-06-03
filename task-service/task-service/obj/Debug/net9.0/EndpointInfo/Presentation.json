@@ -36,7 +36,50 @@
         }
       }
     },
-    "/api/User": {
+    "/api/ToDoList/CreateTodolist": {
+      "post": {
+        "tags": [
+          "ToDoList"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewToDoListDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewToDoListDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewToDoListDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ToDoList/GetToDoLists": {
+      "get": {
+        "tags": [
+          "ToDoList"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/User/CreateUser": {
       "post": {
         "tags": [
           "User"
@@ -65,7 +108,9 @@
             "description": "OK"
           }
         }
-      },
+      }
+    },
+    "/api/User/GetUser": {
       "get": {
         "tags": [
           "User"
@@ -80,6 +125,16 @@
   },
   "components": {
     "schemas": {
+      "NewToDoListDTO": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "UserDTO": {
         "type": "object",
         "properties": {

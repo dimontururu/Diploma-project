@@ -59,6 +59,11 @@ public partial class ToDoListContext : DbContext
             entity.Property(e => e.Status)
                 .HasDefaultValue(false)
                 .HasColumnName("status");
+
+            entity.HasOne(d => d.id_to_do_listNavigation).WithMany(p => p.cases)
+                .HasForeignKey(d => d.id_to_do_list)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("case_id_to_do_list_fkey");
         });
 
         modelBuilder.Entity<ClientType>(entity =>
@@ -106,16 +111,10 @@ public partial class ToDoListContext : DbContext
             entity.Property(e => e.Id)
                 .HasDefaultValueSql("gen_random_uuid()")
                 .HasColumnName("id");
-            entity.Property(e => e.IdTask).HasColumnName("id_task");
             entity.Property(e => e.IdUser).HasColumnName("id_user");
             entity.Property(e => e.Name)
                 .HasMaxLength(50)
                 .HasColumnName("name");
-
-            entity.HasOne(d => d.IdTaskNavigation).WithMany(p => p.ToDoLists)
-                .HasForeignKey(d => d.IdTask)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("to-do_list_id_task_fkey");
 
             entity.HasOne(d => d.IdUserNavigation).WithMany(p => p.ToDoLists)
                 .HasForeignKey(d => d.IdUser)

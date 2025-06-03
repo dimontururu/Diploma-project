@@ -1,9 +1,10 @@
-﻿using task_service.Domain.Entities;
+﻿using task_service.Application.DTOs;
+using task_service.Domain.Entities;
 
 namespace task_service.Application.Interfaces
 {
     public interface ITokenService
     {
-        string GenerateToken(User user);
+        string GenerateToken(UserDTO userDTO);
     }
 }

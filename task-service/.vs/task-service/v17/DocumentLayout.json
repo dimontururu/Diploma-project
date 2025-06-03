@@ -3,16 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Diploma-project\\task-service\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{80E18D2D-1B22-4241-A656-1A979058C59F}|Infrastructure\\Infrastructure.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\diploma-project\\task-service\\infrastructure\\jwt\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{80E18D2D-1B22-4241-A656-1A979058C59F}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\jwt\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{80E18D2D-1B22-4241-A656-1A979058C59F}|Infrastructure\\Infrastructure.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\diploma-project\\task-service\\infrastructure\\registrationinfrastructure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{80E18D2D-1B22-4241-A656-1A979058C59F}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\registrationinfrastructure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{99A5D1C1-1C61-4276-9813-373EBF3813FF}|task-service\\Presentation.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\diploma-project\\task-service\\task-service\\controllers\\todolistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99A5D1C1-1C61-4276-9813-373EBF3813FF}|task-service\\Presentation.csproj|solutionrelative:task-service\\controllers\\todolistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{99A5D1C1-1C61-4276-9813-373EBF3813FF}|task-service\\Presentation.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\diploma-project\\task-service\\task-service\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{99A5D1C1-1C61-4276-9813-373EBF3813FF}|task-service\\Presentation.csproj|solutionrelative:task-service\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B04A019D-36D7-41F4-95CF-BF2DF6F8C517}|Application\\Application.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\diploma-project\\task-service\\application\\services\\todolistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B04A019D-36D7-41F4-95CF-BF2DF6F8C517}|Application\\Application.csproj|solutionrelative:application\\services\\todolistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80E18D2D-1B22-4241-A656-1A979058C59F}|Infrastructure\\Infrastructure.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\diploma-project\\task-service\\infrastructure\\data\\todolistcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80E18D2D-1B22-4241-A656-1A979058C59F}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\data\\todolistcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B04A019D-36D7-41F4-95CF-BF2DF6F8C517}|Application\\Application.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\diploma-project\\task-service\\application\\dtos\\returntodolistsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B04A019D-36D7-41F4-95CF-BF2DF6F8C517}|Application\\Application.csproj|solutionrelative:application\\dtos\\returntodolistsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80E18D2D-1B22-4241-A656-1A979058C59F}|Infrastructure\\Infrastructure.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\diploma-project\\task-service\\infrastructure\\data\\repositories\\todolistrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80E18D2D-1B22-4241-A656-1A979058C59F}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\data\\repositories\\todolistrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2D75653-8AAD-4049-A926-9838DFAA3FBB}|Domain\\Domain.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\diploma-project\\task-service\\domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2D75653-8AAD-4049-A926-9838DFAA3FBB}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2D75653-8AAD-4049-A926-9838DFAA3FBB}|Domain\\Domain.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\diploma-project\\task-service\\domain\\entities\\todolist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2D75653-8AAD-4049-A926-9838DFAA3FBB}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\todolist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B04A019D-36D7-41F4-95CF-BF2DF6F8C517}|Application\\Application.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\diploma-project\\task-service\\application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B04A019D-36D7-41F4-95CF-BF2DF6F8C517}|Application\\Application.csproj|solutionrelative:application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,17 +46,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Diploma-project\\task-service\\task-service\\Program.cs",
               "RelativeDocumentMoniker": "task-service\\Program.cs",
               "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Diploma-project\\task-service\\task-service\\Program.cs",
               "RelativeToolTip": "task-service\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAgwAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-23T06:37:17.845Z",
               "IsPinned": true,
@@ -40,28 +64,106 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "JwtService.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Diploma-project\\task-service\\Infrastructure\\JWT\\JwtService.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\JWT\\JwtService.cs",
-              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Diploma-project\\task-service\\Infrastructure\\JWT\\JwtService.cs",
-              "RelativeToolTip": "Infrastructure\\JWT\\JwtService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "ReturnToDoListsDTO.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Diploma-project\\task-service\\Application\\DTOs\\ReturnToDoListsDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\ReturnToDoListsDTO.cs",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Diploma-project\\task-service\\Application\\DTOs\\ReturnToDoListsDTO.cs",
+              "RelativeToolTip": "Application\\DTOs\\ReturnToDoListsDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T09:39:03.328Z",
+              "WhenOpened": "2025-06-03T14:51:05.87Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RegistrationInfrastructure.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Diploma-project\\task-service\\Infrastructure\\RegistrationInfrastructure.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\RegistrationInfrastructure.cs",
-              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Diploma-project\\task-service\\Infrastructure\\RegistrationInfrastructure.cs",
-              "RelativeToolTip": "Infrastructure\\RegistrationInfrastructure.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAADwvzgAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "ToDoListRepository.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Diploma-project\\task-service\\Infrastructure\\Data\\Repositories\\ToDoListRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Data\\Repositories\\ToDoListRepository.cs",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Diploma-project\\task-service\\Infrastructure\\Data\\Repositories\\ToDoListRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Data\\Repositories\\ToDoListRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T09:38:49.403Z",
+              "WhenOpened": "2025-06-03T14:27:11.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ToDoList.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Diploma-project\\task-service\\Domain\\Entities\\ToDoList.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\ToDoList.cs",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Diploma-project\\task-service\\Domain\\Entities\\ToDoList.cs",
+              "RelativeToolTip": "Domain\\Entities\\ToDoList.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T14:15:52.087Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Diploma-project\\task-service\\Domain\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\User.cs",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Diploma-project\\task-service\\Domain\\Entities\\User.cs",
+              "RelativeToolTip": "Domain\\Entities\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T14:15:08.878Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ToDoListContext.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Diploma-project\\task-service\\Infrastructure\\Data\\ToDoListContext.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Data\\ToDoListContext.cs",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Diploma-project\\task-service\\Infrastructure\\Data\\ToDoListContext.cs",
+              "RelativeToolTip": "Infrastructure\\Data\\ToDoListContext.cs",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAQwGoAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T14:11:51.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Diploma-project\\task-service\\Application\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Diploma-project\\task-service\\Application\\Services\\UserService.cs",
+              "RelativeToolTip": "Application\\Services\\UserService.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T14:08:50.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ToDoListService.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Diploma-project\\task-service\\Application\\Services\\ToDoListService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\ToDoListService.cs",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Diploma-project\\task-service\\Application\\Services\\ToDoListService.cs",
+              "RelativeToolTip": "Application\\Services\\ToDoListService.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBgAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T13:28:02.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ToDoListController.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Diploma-project\\task-service\\task-service\\Controllers\\ToDoListController.cs",
+              "RelativeDocumentMoniker": "task-service\\Controllers\\ToDoListController.cs",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Diploma-project\\task-service\\task-service\\Controllers\\ToDoListController.cs",
+              "RelativeToolTip": "task-service\\Controllers\\ToDoListController.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAYwDcAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T10:52:16.309Z",
               "EditorCaption": ""
             }
           ]

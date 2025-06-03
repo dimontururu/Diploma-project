@@ -3,8 +3,8 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using task_service.Application.DTOs;
 using task_service.Application.Interfaces;
-using task_service.Domain.Entities;
 
 namespace task_service.Infrastructure.JWT
 {
@@ -15,11 +15,12 @@ namespace task_service.Infrastructure.JWT
 
         public JwtService(IOptions<JwtSettings> settings) => _settings = settings.Value;
 
-        public string GenerateToken(User user)
+        public string GenerateToken(UserDTO userDTO)
         {
             var claims = new List<Claim>
             {
-                new(JwtRegisteredClaimNames.Sub, user.Id.ToString())
+                new("client_id", userDTO.Id),
+                new("client_type", userDTO.type_id)
             };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_settings.Secret));

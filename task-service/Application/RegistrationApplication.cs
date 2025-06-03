@@ -8,7 +8,8 @@ namespace task_service.Application
     {
         public static IServiceCollection AddApplication(this IServiceCollection services)
         {
-            services.AddTransient<IUserService, UserService>();
+            services.AddTransient<IUserService, UserService>().
+                AddTransient<IToDoListService, ToDoListService>();
             return services;
         }
     }

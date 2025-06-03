@@ -20,22 +20,28 @@ namespace task_service.Presentation.Controllers
             _tokenService = tokenService;
         }
 
-        [HttpPost]
+        [HttpPost("CreateUser")]
         public async Task<ActionResult> CreateUser(UserDTO userDTO)
         {
             var user = await _userService.CreateUser(userDTO);
 
-            var token = _tokenService.GenerateToken(user);
+            var token = _tokenService.GenerateToken(userDTO);
 
             return Ok(token);
         }
 
         [Authorize]
-        [HttpGet]
+        [HttpGet("GetUser")]
         public async Task<ActionResult> GetUser()
         {
-            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            return Ok(userId);
+            var userDTO = new UserDTO
+            {
+                Id = User.FindFirstValue("client_id"),
+                type_id = User.FindFirstValue("client_type"),
+
+            };
+
+            return Ok(userDTO);
         }
     }
 }

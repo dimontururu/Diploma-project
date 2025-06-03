@@ -12,5 +12,7 @@ public partial class Case
 
     public DateTime DateEnd { get; set; }
 
-    public virtual ICollection<ToDoList> ToDoLists { get; set; } = new List<ToDoList>();
+    public Guid id_to_do_list { get; set; }
+
+    public virtual ToDoList id_to_do_listNavigation { get; set; } = null!;
 }

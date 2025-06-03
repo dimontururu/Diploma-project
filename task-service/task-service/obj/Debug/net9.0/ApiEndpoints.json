@@ -1,6 +1,6 @@
 [
   {
-    "ContainingType": "task_service.Controllers.AuthController",
+    "ContainingType": "ttask_service.Presentation.Controllers.AuthController",
     "Method": "authorization",
     "RelativePath": "api/Auth/authorization",
     "HttpMethod": "POST",
@@ -16,9 +16,35 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "task_service.Presentation.Controllers.ToDoListController",
+    "Method": "CreateTo_Do_List",
+    "RelativePath": "api/ToDoList/CreateTodolist",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "toDoListDTO",
+        "Type": "task_service.Application.DTOs.NewToDoListDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "task_service.Presentation.Controllers.ToDoListController",
+    "Method": "GetToDoLists",
+    "RelativePath": "api/ToDoList/GetToDoLists",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "task_service.Presentation.Controllers.UserController",
     "Method": "CreateUser",
-    "RelativePath": "api/User",
+    "RelativePath": "api/User/CreateUser",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -34,7 +60,7 @@
   {
     "ContainingType": "task_service.Presentation.Controllers.UserController",
     "Method": "GetUser",
-    "RelativePath": "api/User",
+    "RelativePath": "api/User/GetUser",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
