@@ -9,10 +9,12 @@ namespace task_service.Application.Services
 {
     internal class ToDoListService : IToDoListService
     {
-        private IToDoListRepository _toDoListRepository;
-        public ToDoListService(IToDoListRepository toDoListRepository) 
+        private readonly IToDoListRepository _toDoListRepository;
+        private readonly ICaseRepository _caseRepository;
+        public ToDoListService(IToDoListRepository toDoListRepository,ICaseRepository caseRepository) 
         {
             _toDoListRepository = toDoListRepository;
+            _caseRepository = caseRepository;
         }
 
         public async Task<ToDoList> CreateToDoList(NewToDoListDTO toDoListDTO, User user)
@@ -23,21 +25,23 @@ namespace task_service.Application.Services
             ToDoList toDoList = CreateNewToDoList(toDoListDTO);
 
             toDoList.IdUser = user.Id;
-
-            //user.ToDoLists.Add(toDoList);
+            toDoList.IdUserNavigation = user;
 
             await _toDoListRepository.AddAsync(toDoList);
 
             return toDoList;
         }
 
-        //public async Task<ReturnToDoListsDTO> GetToDoList(Guid Id)
-        //{
-        //    ToDoList toDoList = await _toDoListRepository.GetAsync(Id)
-        //         ?? throw new KeyNotFoundException("Тип клиента не найден");
+        public async Task DeleteToDoList(Guid id, User user)
+        {
+            CheckIfTheUserHasAToDoList(id, user);
 
-        //    return toDoList;
-        //}
+            ToDoList toDoList = await _toDoListRepository.GetAsync(id);
+            foreach (Case c in toDoList.cases)
+                _toDoListRepository.DeleteAsync(c.Id);
+
+            await _toDoListRepository.DeleteAsync(id);
+        }
 
         public async Task<ICollection<ReturnToDoListsDTO>> GetToDoLists(User user)
         {
@@ -54,9 +58,35 @@ namespace task_service.Application.Services
             return returnToDoListsDTO;
         }
 
+        public async Task PutToDoList(PutToDoListDTO putToDoListDTO, User user)
+        {
+            CheckIfTheUserHasAToDoList(putToDoListDTO.Id, user);
+
+            ToDoList toDoList = await _toDoListRepository.GetAsync(putToDoListDTO.Id);
+            toDoList.Name = putToDoListDTO.Name;
+            await _toDoListRepository.PutAsync(toDoList);
+        }
+
         private ToDoList CreateNewToDoList(NewToDoListDTO toDoListDTO)
         {
             return new ToDoList { Name = toDoListDTO.Name};
+        }
+
+        private void CheckIfTheUserHasAToDoList(Guid id, User user)
+        {
+            //есть ли у пользователя этот список задач
+            bool found = false;
+            foreach (var t in user.ToDoLists)
+            {
+                if (t.Id == id)
+                {
+                    found = true;
+                    break;
+                }
+            }
+
+            if (!found)
+                throw new KeyNotFoundException("У пользователя не найде такая задача");
         }
     }
 }

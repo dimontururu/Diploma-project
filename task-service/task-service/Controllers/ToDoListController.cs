@@ -24,15 +24,7 @@ namespace task_service.Presentation.Controllers
         [HttpPost("CreateTodolist")]
         public async Task<IActionResult> CreateTo_Do_List(NewToDoListDTO toDoListDTO)
         {
-            var userDTO = new UserDTO
-            {
-                Name = "Костыль",
-                Id = User.FindFirstValue("client_id"),
-                type_id = User.FindFirstValue("client_type"),
-
-            };
-
-            User user = await _userService.GetUser(userDTO);
+            User user = await UserFromToken();
 
             await _toDoListService.CreateToDoList(toDoListDTO, user);
 
@@ -43,6 +35,34 @@ namespace task_service.Presentation.Controllers
         [HttpGet("GetToDoLists")]
         public async Task<IActionResult> GetToDoLists()
         {
+            User user = await UserFromToken();
+
+            ICollection<ReturnToDoListsDTO> toDoLists = await _toDoListService.GetToDoLists(user);
+            return Ok(toDoLists);
+        }
+
+        [Authorize]
+        [HttpDelete("DeleteToDoList")]
+        public async Task<IActionResult> DeleteToDoList(Guid idToDoList)
+        {
+            User user = await UserFromToken();
+
+            await _toDoListService.DeleteToDoList(idToDoList, user);
+            return Ok();
+        }
+
+        [Authorize]
+        [HttpPut("PutToDoList")]
+        public async Task<IActionResult> PutToDoList(PutToDoListDTO putToDoListDTO)
+        {
+            User user = await UserFromToken();
+
+            await _toDoListService.PutToDoList(putToDoListDTO, user);
+            return Ok();
+        }
+
+        private async Task<User> UserFromToken()
+        {
             var userDTO = new UserDTO
             {
                 Name = "Костыль",
@@ -51,11 +71,7 @@ namespace task_service.Presentation.Controllers
 
             };
 
-            User user = await _userService.GetUser(userDTO);
-            ICollection<ReturnToDoListsDTO> toDoLists = await _toDoListService.GetToDoLists(user);
-            return Ok(toDoLists);
+            return await _userService.GetUser(userDTO);
         }
-
-
     }
 }

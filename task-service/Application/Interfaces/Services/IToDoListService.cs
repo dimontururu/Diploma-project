@@ -7,8 +7,10 @@ namespace task_service.Application.Interfaces.Services
     public interface IToDoListService
     {
         Task<ToDoList> CreateToDoList(NewToDoListDTO toDoListDTO,User user);
-        //Task<ReturnToDoListsDTO> GetToDoList(Guid Id);
 
         Task<ICollection<ReturnToDoListsDTO>> GetToDoLists(User user);
+
+        Task DeleteToDoList(Guid id, User user);
+        Task PutToDoList(PutToDoListDTO putToDoListDTO, User user);
     }
 }

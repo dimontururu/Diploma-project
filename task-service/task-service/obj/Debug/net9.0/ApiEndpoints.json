@@ -33,12 +33,44 @@
   },
   {
     "ContainingType": "task_service.Presentation.Controllers.ToDoListController",
+    "Method": "DeleteToDoList",
+    "RelativePath": "api/ToDoList/DeleteToDoList",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idToDoList",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "task_service.Presentation.Controllers.ToDoListController",
     "Method": "GetToDoLists",
     "RelativePath": "api/ToDoList/GetToDoLists",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "task_service.Presentation.Controllers.ToDoListController",
+    "Method": "PutToDoList",
+    "RelativePath": "api/ToDoList/PutToDoList",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "putToDoListDTO",
+        "Type": "task_service.Application.DTOs.PutToDoListDTO",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {

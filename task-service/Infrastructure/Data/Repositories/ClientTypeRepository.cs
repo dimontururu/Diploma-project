@@ -15,7 +15,9 @@ namespace task_service.Infrastructure.Data.Repositories
 
         public async Task<ClientType?> GetByTypeAsync(string typeId)
         {
-            return await _DB.ClientTypes.FirstOrDefaultAsync(ct => ct.Type == typeId);
+            return await _DB.ClientTypes
+                .Include(ct => ct.IdClients)
+                .FirstOrDefaultAsync(ct => ct.Type == typeId);
         }
     }
 }

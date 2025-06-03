@@ -6,5 +6,9 @@ namespace task_service.Domain.Interfaces.IRepository
     {
         Task AddAsync(ToDoList toDoList);
         Task<ToDoList> GetAsync(Guid id);
+
+        Task DeleteAsync(Guid id);
+
+        Task PutAsync(ToDoList toDoList);
     }
 }
