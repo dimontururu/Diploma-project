@@ -1,5 +1,4 @@
-﻿using Application.DTOs;
-using task_service.Application.DTOs;
+﻿using task_service.Application.DTOs.ToDoListDTO;
 using task_service.Domain.Entities;
 
 namespace task_service.Application.Interfaces.Services
@@ -10,7 +9,9 @@ namespace task_service.Application.Interfaces.Services
 
         Task<ICollection<ReturnToDoListsDTO>> GetToDoLists(User user);
 
-        Task DeleteToDoList(Guid id, User user);
-        Task PutToDoList(PutToDoListDTO putToDoListDTO, User user);
+        Task DeleteToDoList(Guid id);
+        Task PutToDoList(PutToDoListDTO putToDoListDTO);
+
+        Task<ToDoList> GetToDoList(Guid id);
     }
 }

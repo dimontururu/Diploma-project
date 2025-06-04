@@ -16,6 +16,75 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "task_service.Controllers.CaseController",
+    "Method": "CreateCase",
+    "RelativePath": "api/Case/CreateCase",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newCaseDTO",
+        "Type": "task_service.Application.DTOs.CaseDTO.NewCaseDTO",
+        "IsRequired": true
+      },
+      {
+        "Name": "idToDoList",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "task_service.Controllers.CaseController",
+    "Method": "DeleteCase",
+    "RelativePath": "api/Case/DeleteCase",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idCase",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "task_service.Controllers.CaseController",
+    "Method": "GetCases",
+    "RelativePath": "api/Case/GetCases",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idToDoList",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "task_service.Controllers.CaseController",
+    "Method": "PutCase",
+    "RelativePath": "api/Case/PutCase",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "putCase",
+        "Type": "task_service.Application.DTOs.CaseDTO.PutCaseDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "task_service.Presentation.Controllers.ToDoListController",
     "Method": "CreateTo_Do_List",
     "RelativePath": "api/ToDoList/CreateTodolist",
@@ -25,7 +94,7 @@
     "Parameters": [
       {
         "Name": "toDoListDTO",
-        "Type": "task_service.Application.DTOs.NewToDoListDTO",
+        "Type": "task_service.Application.DTOs.ToDoListDTO.NewToDoListDTO",
         "IsRequired": true
       }
     ],
@@ -67,7 +136,7 @@
     "Parameters": [
       {
         "Name": "putToDoListDTO",
-        "Type": "task_service.Application.DTOs.PutToDoListDTO",
+        "Type": "task_service.Application.DTOs.ToDoListDTO.PutToDoListDTO",
         "IsRequired": true
       }
     ],

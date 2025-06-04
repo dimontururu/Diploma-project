@@ -1,5 +1,4 @@
-﻿using Application.DTOs;
-using task_service.Application.DTOs;
+﻿using task_service.Application.DTOs.ToDoListDTO;
 using task_service.Application.Interfaces.Services;
 using task_service.Application.Validators;
 using task_service.Domain.Entities;
@@ -32,10 +31,8 @@ namespace task_service.Application.Services
             return toDoList;
         }
 
-        public async Task DeleteToDoList(Guid id, User user)
+        public async Task DeleteToDoList(Guid id)
         {
-            CheckIfTheUserHasAToDoList(id, user);
-
             ToDoList toDoList = await _toDoListRepository.GetAsync(id);
             foreach (Case c in toDoList.cases)
                 _toDoListRepository.DeleteAsync(c.Id);
@@ -58,35 +55,21 @@ namespace task_service.Application.Services
             return returnToDoListsDTO;
         }
 
-        public async Task PutToDoList(PutToDoListDTO putToDoListDTO, User user)
+        public async Task PutToDoList(PutToDoListDTO putToDoListDTO)
         {
-            CheckIfTheUserHasAToDoList(putToDoListDTO.Id, user);
-
             ToDoList toDoList = await _toDoListRepository.GetAsync(putToDoListDTO.Id);
             toDoList.Name = putToDoListDTO.Name;
             await _toDoListRepository.PutAsync(toDoList);
         }
 
+        public async Task<ToDoList> GetToDoList(Guid id)
+        {
+            return await _toDoListRepository.GetAsync(id);
+        }
+
         private ToDoList CreateNewToDoList(NewToDoListDTO toDoListDTO)
         {
             return new ToDoList { Name = toDoListDTO.Name};
-        }
-
-        private void CheckIfTheUserHasAToDoList(Guid id, User user)
-        {
-            //есть ли у пользователя этот список задач
-            bool found = false;
-            foreach (var t in user.ToDoLists)
-            {
-                if (t.Id == id)
-                {
-                    found = true;
-                    break;
-                }
-            }
-
-            if (!found)
-                throw new KeyNotFoundException("У пользователя не найде такая задача");
         }
     }
 }

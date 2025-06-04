@@ -25,7 +25,7 @@ namespace task_service.Infrastructure.Middlewares
             catch (
             Exception e)
             {
-                await HandleExceptionAsync(httpContext, e.Message, HttpStatusCode.NotFound, "The user cannot be null1");
+                await HandleExceptionAsync(httpContext, e.Message, HttpStatusCode.NotFound, "что то пошло не так");
             }
         }
 

@@ -11,6 +11,13 @@ namespace task_service.Infrastructure.Data.Repositories
         {
             _DB = DB;
         }
+
+        public async Task AddAsync(Case @case)
+        {
+            await _DB.Cases.AddAsync(@case);
+            await _DB.SaveChangesAsync();
+        }
+
         public async Task DeleteAsync(Guid id)
         {
             _DB.Cases.Remove(await GetAsync(id));
@@ -22,6 +29,12 @@ namespace task_service.Infrastructure.Data.Repositories
             return await _DB.Cases
                 .Include(C => C.id_to_do_listNavigation)
                 .FirstOrDefaultAsync(C => C.Id == id);
+        }
+
+        public async Task PutAsync(Case @case)
+        {
+            _DB.Entry(@case).State = EntityState.Modified;
+            await _DB.SaveChangesAsync();
         }
     }
 }

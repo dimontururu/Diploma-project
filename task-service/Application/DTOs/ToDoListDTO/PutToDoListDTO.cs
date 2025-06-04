@@ -1,4 +1,4 @@
-﻿namespace task_service.Application.DTOs
+﻿namespace task_service.Application.DTOs.ToDoListDTO
 {
     public class PutToDoListDTO
     {

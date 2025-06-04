@@ -9,7 +9,8 @@ namespace task_service.Application
         public static IServiceCollection AddApplication(this IServiceCollection services)
         {
             services.AddScoped<IUserService, UserService>()
-                .AddScoped<IToDoListService, ToDoListService>();
+                .AddScoped<IToDoListService, ToDoListService>()
+                .AddScoped<ICaseService,CaseService>();
             return services;
         }
     }

@@ -1,8 +1,8 @@
-﻿using Application.DTOs;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using task_service.Application.DTOs;
+using task_service.Application.DTOs.ToDoListDTO;
 using task_service.Application.Interfaces.Services;
 using task_service.Domain.Entities;
 
@@ -45,9 +45,7 @@ namespace task_service.Presentation.Controllers
         [HttpDelete("DeleteToDoList")]
         public async Task<IActionResult> DeleteToDoList(Guid idToDoList)
         {
-            User user = await UserFromToken();
-
-            await _toDoListService.DeleteToDoList(idToDoList, user);
+            await _toDoListService.DeleteToDoList(idToDoList);
             return Ok();
         }
 
@@ -55,9 +53,7 @@ namespace task_service.Presentation.Controllers
         [HttpPut("PutToDoList")]
         public async Task<IActionResult> PutToDoList(PutToDoListDTO putToDoListDTO)
         {
-            User user = await UserFromToken();
-
-            await _toDoListService.PutToDoList(putToDoListDTO, user);
+            await _toDoListService.PutToDoList(putToDoListDTO);
             return Ok();
         }
 
