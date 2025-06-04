@@ -11,7 +11,8 @@ namespace task_service.Application
             services.AddScoped<IUserService, UserService>()
                 .AddScoped<IToDoListService, ToDoListService>()
                 .AddScoped<ICaseService, CaseService>()
-                .AddScoped<IAwardServices, AwardServices>();
+                .AddScoped<IAwardServices, AwardServices>()
+                .AddScoped<IUserAwardServices,UserAwardServices>();
             return services;
         }
     }

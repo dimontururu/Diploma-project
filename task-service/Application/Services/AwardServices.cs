@@ -13,6 +13,10 @@ namespace task_service.Application.Services
             _awardRepository = awardRepository;
         }
 
+        public async Task<Award> GetAward(Guid id)
+        {
+            return await _awardRepository.GetAsync(id);
+        }
 
         public async Task<ICollection<ReturnAwardDTO>> GetAwards()
         {

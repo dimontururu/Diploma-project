@@ -15,5 +15,10 @@ namespace task_service.Infrastructure.Data.Repositories
         {
             return await _DB.Awards.ToListAsync();
         }
+
+        public async Task<Award> GetAsync(Guid id)
+        {
+            return await _DB.Awards.FindAsync(id);
+        }
     }
 }

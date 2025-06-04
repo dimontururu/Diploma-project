@@ -31,6 +31,11 @@ namespace task_service.Application.Services
             if (DtoValidator.HasEmptyValues(userDTO))
                 throw new ArgumentException("При создании пользователя поступили пустые данные");
 
+            try
+            {
+                return await GetUser(userDTO);
+            }
+            catch{ }
             var user = CreateNewUser(userDTO);
 
             var clientType = await _clientTypeRepository.GetByTypeAsync(userDTO.type_id)

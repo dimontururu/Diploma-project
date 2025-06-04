@@ -177,5 +177,31 @@
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "task_service.Presentation.Controllers.UserAwardController",
+    "Method": "GetUserAward",
+    "RelativePath": "api/UserAward/GetUserAward",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "task_service.Presentation.Controllers.UserAwardController",
+    "Method": "PostUserAward",
+    "RelativePath": "api/UserAward/PostUserAward",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idAward",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
   }
 ]
