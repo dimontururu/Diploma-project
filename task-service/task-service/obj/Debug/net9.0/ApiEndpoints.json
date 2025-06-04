@@ -16,6 +16,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "task_service.Presentation.Controllers.AwardController",
+    "Method": "GetAwards",
+    "RelativePath": "api/Award/GetAwards",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "task_service.Controllers.CaseController",
     "Method": "CreateCase",
     "RelativePath": "api/Case/CreateCase",

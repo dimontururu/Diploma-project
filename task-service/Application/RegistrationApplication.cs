@@ -10,7 +10,8 @@ namespace task_service.Application
         {
             services.AddScoped<IUserService, UserService>()
                 .AddScoped<IToDoListService, ToDoListService>()
-                .AddScoped<ICaseService,CaseService>();
+                .AddScoped<ICaseService, CaseService>()
+                .AddScoped<IAwardServices, AwardServices>();
             return services;
         }
     }

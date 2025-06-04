@@ -22,6 +22,7 @@ namespace task_service.Infrastructure
                 AddScoped<IClientTypeRepository, ClientTypeRepository>().
                 AddScoped<IToDoListRepository, ToDoListRepository>().
                 AddScoped<ICaseRepository, CaseRepository>().
+                AddScoped<IAwardRepository,AwardRepository>().
                 AddDbContext<ToDoListContext>(options => options.UseNpgsql(Environment.GetEnvironmentVariable("ConnectionString"))).
                 AddTransient<ITokenService, JwtService>(); ;
 
