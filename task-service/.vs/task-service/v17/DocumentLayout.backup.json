@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Diploma-project\\task-service\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{99A5D1C1-1C61-4276-9813-373EBF3813FF}|task-service\\Presentation.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\diploma-project\\task-service\\task-service\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{99A5D1C1-1C61-4276-9813-373EBF3813FF}|task-service\\Presentation.csproj|solutionrelative:task-service\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99A5D1C1-1C61-4276-9813-373EBF3813FF}|task-service\\Presentation.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\diploma-project\\task-service\\task-service\\presentation.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{99A5D1C1-1C61-4276-9813-373EBF3813FF}|task-service\\Presentation.csproj|solutionrelative:task-service\\presentation.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{99A5D1C1-1C61-4276-9813-373EBF3813FF}|task-service\\Presentation.csproj|c:\\users\\\u0434\u043C\u0438\u0442\u0440\u0438\u0439\\desktop\\diploma-project\\task-service\\task-service\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{99A5D1C1-1C61-4276-9813-373EBF3813FF}|task-service\\Presentation.csproj|solutionrelative:task-service\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -14,20 +22,44 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Diploma-project\\task-service\\task-service\\Program.cs",
               "RelativeDocumentMoniker": "task-service\\Program.cs",
               "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Diploma-project\\task-service\\task-service\\Program.cs",
               "RelativeToolTip": "task-service\\Program.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAtwDIAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAAAAwDYAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-23T06:37:17.845Z",
-              "IsPinned": true,
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Presentation",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Diploma-project\\task-service\\task-service\\Presentation.csproj",
+              "RelativeDocumentMoniker": "task-service\\Presentation.csproj",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Diploma-project\\task-service\\task-service\\Presentation.csproj",
+              "RelativeToolTip": "task-service\\Presentation.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-04T18:21:41.031Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Diploma-project\\task-service\\task-service\\Dockerfile",
+              "RelativeDocumentMoniker": "task-service\\Dockerfile",
+              "ToolTip": "C:\\Users\\\u0414\u043C\u0438\u0442\u0440\u0438\u0439\\Desktop\\Diploma-project\\task-service\\task-service\\Dockerfile*",
+              "RelativeToolTip": "task-service\\Dockerfile*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-06-04T16:01:12.163Z",
               "EditorCaption": ""
             }
           ]

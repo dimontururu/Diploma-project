@@ -34,7 +34,13 @@
       "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",
       "environmentVariables": {
         "ASPNETCORE_HTTPS_PORTS": "8081",
-        "ASPNETCORE_HTTP_PORTS": "8080"
+        "ASPNETCORE_HTTP_PORTS": "8080",
+        "JWT__SECRET": "325c42b2c057a4a82633c834258cd9c4a764e652fe1630d1a2558be975402f60",
+        "JWT__ISSUER": "myapp.com",
+        "JWT__EXPIRY_MINUTES": "15",
+        "JWT__AUDIENCE": "myapp.com",
+        "JWT__REFRESH_TOKEN_EXPIRY_DAYS": "7",
+        "ConnectionString": "Host=localhost;Port=5555;Database=to_do_list;Username=postgres;Password=Ww2004wW"
       },
       "publishAllPorts": true,
       "useSSL": true

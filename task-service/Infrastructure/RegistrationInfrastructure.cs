@@ -38,7 +38,7 @@ namespace task_service.Infrastructure
             services.AddSingleton<ITokenService, JwtService>();
 
             var jwtSecret = Environment.GetEnvironmentVariable("JWT__SECRET")
-                ?? throw new InvalidOperationException("JWT_SECRET не настроен в переменных окружения");
+                ?? throw new InvalidOperationException("JWT__SECRET не настроен в переменных окружения");
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
                 {

@@ -12,8 +12,8 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["task-service/task-service.csproj", "task-service/"]
-RUN dotnet restore "./task-service/task-service.csproj"
+COPY ["task-service/Presentation.csproj", "task-service/"]
+RUN dotnet restore "./Presentation.csproj"
 COPY . .
 WORKDIR "/src/task-service"
 RUN dotnet build "./task-service.csproj" -c $BUILD_CONFIGURATION -o /app/build
