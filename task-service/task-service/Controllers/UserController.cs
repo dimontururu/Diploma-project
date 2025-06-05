@@ -22,13 +22,14 @@ namespace task_service.Presentation.Controllers
 
         [HttpPost("CreateUser")]
         [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
+        [Produces("text/plain")]
         public async Task<ActionResult> CreateUser(UserDTO userDTO)
         {
             var user = await _userService.CreateUser(userDTO);
 
             var token = _tokenService.GenerateToken(userDTO);
 
-            return Ok(token);
+            return Content(token, "text/plain");
         }
 
         [Authorize]

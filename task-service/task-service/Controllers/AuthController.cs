@@ -20,11 +20,12 @@ namespace ttask_service.Presentation.Controllers
 
         [HttpPost("authorization")]
         [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
+        [Produces("text/plain")]
         public async Task<IActionResult> authorization(UserDTO authorizationDTO ) 
         {
             await _userService.GetUser(authorizationDTO);
             var token = _tokenService.GenerateToken(authorizationDTO);
-            return Ok(token);
+            return Content(token, "text/plain");
         }
     }
 }
