@@ -1,0 +1,15 @@
+C:\Users\Дмитрий\Desktop\Diploma-project\TaskSlayerfrontendTGBot\TaskSlayerfrontendTGBot\bin\Debug\net9.0\TaskSlayerfrontendTGBot.exe
+C:\Users\Дмитрий\Desktop\Diploma-project\TaskSlayerfrontendTGBot\TaskSlayerfrontendTGBot\bin\Debug\net9.0\TaskSlayerfrontendTGBot.deps.json
+C:\Users\Дмитрий\Desktop\Diploma-project\TaskSlayerfrontendTGBot\TaskSlayerfrontendTGBot\bin\Debug\net9.0\TaskSlayerfrontendTGBot.runtimeconfig.json
+C:\Users\Дмитрий\Desktop\Diploma-project\TaskSlayerfrontendTGBot\TaskSlayerfrontendTGBot\bin\Debug\net9.0\TaskSlayerfrontendTGBot.dll
+C:\Users\Дмитрий\Desktop\Diploma-project\TaskSlayerfrontendTGBot\TaskSlayerfrontendTGBot\bin\Debug\net9.0\TaskSlayerfrontendTGBot.pdb
+C:\Users\Дмитрий\Desktop\Diploma-project\TaskSlayerfrontendTGBot\TaskSlayerfrontendTGBot\obj\Debug\net9.0\TaskSlayerfrontendTGBot.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Дмитрий\Desktop\Diploma-project\TaskSlayerfrontendTGBot\TaskSlayerfrontendTGBot\obj\Debug\net9.0\TaskSlayerfrontendTGBot.AssemblyInfoInputs.cache
+C:\Users\Дмитрий\Desktop\Diploma-project\TaskSlayerfrontendTGBot\TaskSlayerfrontendTGBot\obj\Debug\net9.0\TaskSlayerfrontendTGBot.AssemblyInfo.cs
+C:\Users\Дмитрий\Desktop\Diploma-project\TaskSlayerfrontendTGBot\TaskSlayerfrontendTGBot\obj\Debug\net9.0\TaskSlayerfrontendTGBot.csproj.CoreCompileInputs.cache
+C:\Users\Дмитрий\Desktop\Diploma-project\TaskSlayerfrontendTGBot\TaskSlayerfrontendTGBot\obj\Debug\net9.0\TaskSlayerfrontendTGBot.sourcelink.json
+C:\Users\Дмитрий\Desktop\Diploma-project\TaskSlayerfrontendTGBot\TaskSlayerfrontendTGBot\obj\Debug\net9.0\TaskSlayerfrontendTGBot.dll
+C:\Users\Дмитрий\Desktop\Diploma-project\TaskSlayerfrontendTGBot\TaskSlayerfrontendTGBot\obj\Debug\net9.0\refint\TaskSlayerfrontendTGBot.dll
+C:\Users\Дмитрий\Desktop\Diploma-project\TaskSlayerfrontendTGBot\TaskSlayerfrontendTGBot\obj\Debug\net9.0\TaskSlayerfrontendTGBot.pdb
+C:\Users\Дмитрий\Desktop\Diploma-project\TaskSlayerfrontendTGBot\TaskSlayerfrontendTGBot\obj\Debug\net9.0\TaskSlayerfrontendTGBot.genruntimeconfig.cache
+C:\Users\Дмитрий\Desktop\Diploma-project\TaskSlayerfrontendTGBot\TaskSlayerfrontendTGBot\obj\Debug\net9.0\ref\TaskSlayerfrontendTGBot.dll

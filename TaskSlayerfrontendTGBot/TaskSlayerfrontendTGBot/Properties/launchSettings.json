@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "TaskSlayerfrontendTGBot": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
