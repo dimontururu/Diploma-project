@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using task_service.Application.DTOs;
+using task_service.Application.DTOs.AwardDTO;
 using task_service.Application.DTOs.ToDoListDTO;
 using task_service.Application.Interfaces.Services;
 using task_service.Domain.Entities;
@@ -33,6 +34,7 @@ namespace task_service.Presentation.Controllers
 
         [Authorize]
         [HttpGet("GetToDoLists")]
+        [ProducesResponseType(typeof(ICollection<ReturnToDoListsDTO>), StatusCodes.Status200OK)]
         public async Task<IActionResult> GetToDoLists()
         {
             User user = await UserFromToken();

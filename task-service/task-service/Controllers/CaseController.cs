@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using task_service.Application.DTOs.AwardDTO;
 using task_service.Application.DTOs.CaseDTO;
 using task_service.Application.Interfaces.Services;
 using task_service.Domain.Entities;
@@ -31,6 +32,7 @@ namespace task_service.Controllers
 
         [Authorize]
         [HttpGet("GetCases")]
+        [ProducesResponseType(typeof(ICollection<ReturnCaseDTO>), StatusCodes.Status200OK)]
         public async Task<IActionResult> GetCases(Guid idToDoList)
         {
             ToDoList toDoList = await _toDoListService.GetToDoList(idToDoList);

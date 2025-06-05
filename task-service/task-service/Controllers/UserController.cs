@@ -21,6 +21,7 @@ namespace task_service.Presentation.Controllers
         }
 
         [HttpPost("CreateUser")]
+        [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
         public async Task<ActionResult> CreateUser(UserDTO userDTO)
         {
             var user = await _userService.CreateUser(userDTO);
@@ -32,6 +33,7 @@ namespace task_service.Presentation.Controllers
 
         [Authorize]
         [HttpGet("GetUser")]
+        [ProducesResponseType(typeof(UserDTO), StatusCodes.Status200OK)]
         public async Task<ActionResult> GetUser()
         {
             var userDTO = new UserDTO

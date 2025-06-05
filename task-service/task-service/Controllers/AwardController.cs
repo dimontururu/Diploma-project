@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using task_service.Application.DTOs.AwardDTO;
 using task_service.Application.Interfaces.Services;
 
 namespace task_service.Presentation.Controllers
@@ -16,6 +17,7 @@ namespace task_service.Presentation.Controllers
 
         [Authorize]
         [HttpGet("GetAwards")]
+        [ProducesResponseType(typeof(ICollection<ReturnAwardDTO>), StatusCodes.Status200OK)]
         public async Task<IActionResult> GetAwards()
         {
             return Ok(await _awardServices.GetAwards());

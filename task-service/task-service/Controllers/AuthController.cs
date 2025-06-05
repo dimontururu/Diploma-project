@@ -2,7 +2,6 @@
 using task_service.Application.DTOs;
 using task_service.Application.Interfaces;
 using task_service.Application.Interfaces.Services;
-using task_service.Domain.Entities;
 
 namespace ttask_service.Presentation.Controllers
 {
@@ -20,6 +19,7 @@ namespace ttask_service.Presentation.Controllers
         }
 
         [HttpPost("authorization")]
+        [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
         public async Task<IActionResult> authorization(UserDTO authorizationDTO ) 
         {
             await _userService.GetUser(authorizationDTO);
