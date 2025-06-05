@@ -4,7 +4,11 @@
       "commandName": "Project"
     },
     "Container (Dockerfile)": {
-      "commandName": "Docker"
+      "commandName": "Docker",
+      "environmentVariables": {
+        "Bot__token": "7766169740:AAFNAT5PJ6vIfh-orBL1WnBgbI8HD-KILiE",
+        "base__Url": "http://188.126.47.23:32777"
+      }
     }
   }
 }
