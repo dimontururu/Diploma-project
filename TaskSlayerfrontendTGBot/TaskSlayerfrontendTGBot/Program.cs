@@ -15,9 +15,12 @@ class Program
         var serviceProvider = new ServiceCollection()
                .AddScoped<App>()
                .AddScoped<IBotServices,BotService>()
+               .AddSingleton<IUserStateService, UserStateService>()
                .AddScoped<IHandleUpdate,HandleUpdate>()
                .AddScoped<IHandelCommand,HandelCommand>()
                .AddScoped<IHandleError,HandleError>()
+               .AddScoped<IHandelCallbackQuery,HandelCallbackQuery>()
+               .AddSingleton<IHandleUserState,HandleUserState>()
                .AddScoped<TaskServiceApiClient>(_ => new TaskServiceApiClient(Environment.GetEnvironmentVariable("base__Url"),new HttpClient()))
                .AddSingleton<ITelegramBotClient>(_ => new TelegramBotClient(Environment.GetEnvironmentVariable("Bot__token")))
                .BuildServiceProvider();

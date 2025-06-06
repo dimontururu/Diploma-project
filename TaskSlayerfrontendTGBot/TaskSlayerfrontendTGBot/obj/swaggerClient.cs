@@ -22,6 +22,7 @@
 
 namespace TaskSlayerfrontendTGBot.ApiClient
 {
+    using Newtonsoft.Json;
     using System = global::System;
 
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "14.4.0.0 (NJsonSchema v11.3.2.0 (Newtonsoft.Json v13.0.0.0))")]
@@ -31,7 +32,7 @@ namespace TaskSlayerfrontendTGBot.ApiClient
         private string _baseUrl;
         #pragma warning restore 8618
 
-        private System.Net.Http.HttpClient _httpClient;
+        public System.Net.Http.HttpClient _httpClient;
         private static System.Lazy<Newtonsoft.Json.JsonSerializerSettings> _settings = new System.Lazy<Newtonsoft.Json.JsonSerializerSettings>(CreateSerializerSettings, true);
         private Newtonsoft.Json.JsonSerializerSettings _instanceSettings;
 
@@ -46,7 +47,12 @@ namespace TaskSlayerfrontendTGBot.ApiClient
 
         private static Newtonsoft.Json.JsonSerializerSettings CreateSerializerSettings()
         {
-            var settings = new Newtonsoft.Json.JsonSerializerSettings();
+            var settings = new JsonSerializerSettings
+            {
+                DateFormatHandling = DateFormatHandling.IsoDateFormat,
+                DateTimeZoneHandling = DateTimeZoneHandling.Utc,
+                DateFormatString = "yyyy'-'MM'-'dd'T'HH':'mm':'ss.fff'Z'"
+            }; ;
             UpdateJsonSerializerSettings(settings);
             return settings;
         }
@@ -127,12 +133,9 @@ namespace TaskSlayerfrontendTGBot.ApiClient
                         var status_ = (int)response_.StatusCode;
                         if (status_ == 200)
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<string>(response_, headers_, cancellationToken).ConfigureAwait(false);
-                            if (objectResponse_.Object == null)
-                            {
-                                throw new ApiException("Response was null which was not expected.", status_, objectResponse_.Text, headers_, null);
-                            }
-                            return objectResponse_.Object;
+                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false);
+                            var result_ = (string)System.Convert.ChangeType(responseData_, typeof(string));
+                            return result_;
                         }
                         else
                         {

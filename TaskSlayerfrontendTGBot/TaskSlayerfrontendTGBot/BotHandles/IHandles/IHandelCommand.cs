@@ -5,6 +5,7 @@ namespace TaskSlayerfrontendTGBot.BotHandles.IHandles
 {
     internal interface IHandelCommand
     {
-        public Task StartCommand(ITelegramBotClient bot, Update update, CancellationToken cancellationToken);
+        Task StartCommand(ITelegramBotClient bot, Update update, CancellationToken cancellationToken);
+        Task To_do_listCommand(ITelegramBotClient bot, Update update, CancellationToken cancellationToken);
     }
 }
