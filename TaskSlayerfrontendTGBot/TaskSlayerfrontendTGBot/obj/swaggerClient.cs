@@ -20,24 +20,23 @@
 #pragma warning disable 8625 // Disable "CS8625 Cannot convert null literal to non-nullable reference type"
 #pragma warning disable 8765 // Disable "CS8765 Nullability of type of parameter doesn't match overridden member (possibly because of nullability attributes)."
 
-namespace TaskSlayerfrontendTGBot.ApiClient
+namespace Infrastructure.Api
 {
-    using Newtonsoft.Json;
     using System = global::System;
 
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "14.4.0.0 (NJsonSchema v11.3.2.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class TaskServiceApiClient 
+    public partial class swaggerClient 
     {
         #pragma warning disable 8618
         private string _baseUrl;
         #pragma warning restore 8618
 
-        public System.Net.Http.HttpClient _httpClient;
+        private System.Net.Http.HttpClient _httpClient;
         private static System.Lazy<Newtonsoft.Json.JsonSerializerSettings> _settings = new System.Lazy<Newtonsoft.Json.JsonSerializerSettings>(CreateSerializerSettings, true);
         private Newtonsoft.Json.JsonSerializerSettings _instanceSettings;
 
     #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
-        public TaskServiceApiClient(string baseUrl, System.Net.Http.HttpClient httpClient)
+        public swaggerClient(string baseUrl, System.Net.Http.HttpClient httpClient)
     #pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         {
             BaseUrl = baseUrl;
@@ -47,12 +46,7 @@ namespace TaskSlayerfrontendTGBot.ApiClient
 
         private static Newtonsoft.Json.JsonSerializerSettings CreateSerializerSettings()
         {
-            var settings = new JsonSerializerSettings
-            {
-                DateFormatHandling = DateFormatHandling.IsoDateFormat,
-                DateTimeZoneHandling = DateTimeZoneHandling.Utc,
-                DateFormatString = "yyyy'-'MM'-'dd'T'HH':'mm':'ss.fff'Z'"
-            }; ;
+            var settings = new Newtonsoft.Json.JsonSerializerSettings();
             UpdateJsonSerializerSettings(settings);
             return settings;
         }

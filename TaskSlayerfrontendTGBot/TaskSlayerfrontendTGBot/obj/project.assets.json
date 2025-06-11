@@ -785,6 +785,45 @@
         "runtime": {
           "lib/net6.0/Telegram.Bots.Extensions.Polling.dll": {}
         }
+      },
+      "Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Domain": "1.0.0",
+          "Telegram.Bot": "22.5.1"
+        },
+        "compile": {
+          "bin/placeholder/Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Application.dll": {}
+        }
+      },
+      "Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Domain.dll": {}
+        }
+      },
+      "Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Application": "1.0.0",
+          "Domain": "1.0.0",
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "compile": {
+          "bin/placeholder/Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -2339,10 +2378,27 @@
         "telegram.bots.extensions.polling.5.9.0.nupkg.sha512",
         "telegram.bots.extensions.polling.nuspec"
       ]
+    },
+    "Application/1.0.0": {
+      "type": "project",
+      "path": "../Application/Application.csproj",
+      "msbuildProject": "../Application/Application.csproj"
+    },
+    "Domain/1.0.0": {
+      "type": "project",
+      "path": "../Domain/Domain.csproj",
+      "msbuildProject": "../Domain/Domain.csproj"
+    },
+    "Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Infrastructure/Infrastructure.csproj",
+      "msbuildProject": "../Infrastructure/Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "Application >= 1.0.0",
+      "Infrastructure >= 1.0.0",
       "Microsoft.Extensions.ApiDescription.Client >= 9.0.5",
       "Microsoft.Extensions.DependencyInjection >= 9.0.5",
       "Microsoft.Extensions.Hosting >= 9.0.5",
@@ -2361,9 +2417,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Дмитрий\\Desktop\\Diploma-project\\TaskSlayerfrontendTGBot\\TaskSlayerfrontendTGBot\\TaskSlayerfrontendTGBot.csproj",
-      "projectName": "TaskSlayerfrontendTGBot",
-      "projectPath": "C:\\Users\\Дмитрий\\Desktop\\Diploma-project\\TaskSlayerfrontendTGBot\\TaskSlayerfrontendTGBot\\TaskSlayerfrontendTGBot.csproj",
+      "projectUniqueName": "C:\\Users\\Дмитрий\\Desktop\\Diploma-project\\TaskSlayerfrontendTGBot\\TaskSlayerfrontendTGBot\\Presentation.csproj",
+      "projectName": "Presentation",
+      "projectPath": "C:\\Users\\Дмитрий\\Desktop\\Diploma-project\\TaskSlayerfrontendTGBot\\TaskSlayerfrontendTGBot\\Presentation.csproj",
       "packagesPath": "C:\\Users\\Дмитрий\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Дмитрий\\Desktop\\Diploma-project\\TaskSlayerfrontendTGBot\\TaskSlayerfrontendTGBot\\obj\\",
       "projectStyle": "PackageReference",
@@ -2385,7 +2441,14 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Дмитрий\\Desktop\\Diploma-project\\TaskSlayerfrontendTGBot\\Application\\Application.csproj": {
+              "projectPath": "C:\\Users\\Дмитрий\\Desktop\\Diploma-project\\TaskSlayerfrontendTGBot\\Application\\Application.csproj"
+            },
+            "C:\\Users\\Дмитрий\\Desktop\\Diploma-project\\TaskSlayerfrontendTGBot\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Дмитрий\\Desktop\\Diploma-project\\TaskSlayerfrontendTGBot\\Infrastructure\\Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

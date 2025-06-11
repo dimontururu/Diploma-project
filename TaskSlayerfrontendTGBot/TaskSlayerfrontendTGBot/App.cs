@@ -1,4 +1,4 @@
-﻿using TaskSlayerfrontendTGBot.Interface.IServices;
+﻿using Application.Interfaces;
 
 namespace TaskSlayerfrontendTGBot
 {

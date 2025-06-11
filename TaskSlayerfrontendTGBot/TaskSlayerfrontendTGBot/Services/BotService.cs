@@ -1,5 +1,4 @@
-﻿using TaskSlayerfrontendTGBot.BotHandles.IHandles;
-using TaskSlayerfrontendTGBot.Interface.IServices;
+﻿using Application.Interfaces;
 using Telegram.Bot;
 
 namespace TaskSlayerfrontendTGBot.Services
@@ -7,20 +6,23 @@ namespace TaskSlayerfrontendTGBot.Services
     internal class BotService: IBotServices
     {
         private readonly ITelegramBotClient _botClient;
-        private readonly IHandleUpdate _handelUpdate;
+        private readonly IBotUpdateHandler _UpdateHandler;
         private readonly IHandleError _handleError;
 
-        public BotService(ITelegramBotClient botClient, IHandleUpdate handelUpdate,IHandleError handleError)
+        public BotService(ITelegramBotClient botClient, IBotUpdateHandler UpdateHandler,IHandleError handleError)
         {
             _botClient = botClient;
-            _handelUpdate = handelUpdate;
+            _UpdateHandler = UpdateHandler;
             _handleError = handleError;
         }
 
         public async Task Start()
         {
             _botClient.StartReceiving(
-                updateHandler: _handelUpdate.HandleUpdateAsync,
+                updateHandler: async (TelegramBotClient,update,CancellationToken) => 
+                {
+                    await _UpdateHandler.HandleAsync(update); 
+                },
                 errorHandler: _handleError.HandleErrorAsync
             );
         }

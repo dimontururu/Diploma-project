@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TaskSlayerfrontendTGBot")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a7a1e84b9384d2d7be172692437699317abc3e27")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b342782bfc3edfacb378d39cc8e423358ef9e14a")]
 [assembly: System.Reflection.AssemblyProductAttribute("TaskSlayerfrontendTGBot")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TaskSlayerfrontendTGBot")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
