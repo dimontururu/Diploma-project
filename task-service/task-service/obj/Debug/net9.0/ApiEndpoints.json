@@ -17,9 +17,7 @@
       {
         "Type": "System.String",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
+          "text/plain"
         ],
         "StatusCode": 200
       }
@@ -210,9 +208,7 @@
       {
         "Type": "System.String",
         "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
+          "text/plain"
         ],
         "StatusCode": 200
       }

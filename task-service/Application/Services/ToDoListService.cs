@@ -34,8 +34,9 @@ namespace task_service.Application.Services
         public async Task DeleteToDoList(Guid id)
         {
             ToDoList toDoList = await _toDoListRepository.GetAsync(id);
-            foreach (Case c in toDoList.cases)
-                _toDoListRepository.DeleteAsync(c.Id);
+            ICollection<Case> cases = toDoList.cases.ToList();
+            foreach (Case c in cases)
+                await _caseRepository.DeleteAsync(c.Id);
 
             await _toDoListRepository.DeleteAsync(id);
         }
