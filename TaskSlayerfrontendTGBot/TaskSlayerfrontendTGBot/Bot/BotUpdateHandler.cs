@@ -11,12 +11,13 @@ namespace Presentation.Bot
     {
         private readonly IEnumerable<IMessageHandler> _handlers;
         private readonly ISessionService _sessionService;
-        ITelegramBotClient _bot;
+        private readonly ITelegramBotClient _bot;
 
-        public BotUpdateHandler(IEnumerable<IMessageHandler> handlers, ISessionService sessionService)
+        public BotUpdateHandler(IEnumerable<IMessageHandler> handlers, ISessionService sessionService, ITelegramBotClient bot)
         {
             _handlers = handlers;
             _sessionService = sessionService;
+            _bot = bot;
         }
 
         public async Task HandleAsync(Update update)
@@ -60,6 +61,8 @@ namespace Presentation.Bot
                     chatId: userId.Value,
                     text: localization["UnknownMessage"]
                 );
+
+                Console.WriteLine("пользователь ввёл запрос который не обрабатывается");
             }
             catch { }
         }
