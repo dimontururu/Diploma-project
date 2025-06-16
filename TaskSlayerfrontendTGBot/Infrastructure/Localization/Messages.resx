@@ -143,19 +143,16 @@
   </data>
   <data name="Help" xml:space="preserve">
     <value>🆘 Help for TaskSlayer Heroes
-
 You're not alone in this battle!
 Here’s what you can do:
 
-✅ /To_do_list — your to-do lists (quests)
+✅ /To_do_list — your list of all quests (ToDo-lists)
 📋 /list — current tasks inside a list
-🎯 /goals — long-term goals
-🏆 /stats — your progress, experience, and rewards
+🏆 /Award — your progress, experience, and rewards
 ⚙️ /Setting — your settings
 
-🛠 Questions about the bot? Write to: @SupportTaskSlayer
-
-Go ahead, hero! The world awaits your achievements!</value>
+🛠 Questions about the bot? Message: @dimon_tururu
+Forward, hero! The world awaits your triumphs!</value>
   </data>
   <data name="LanguageSetConfirmation" xml:space="preserve">
     <value> ✅ Language has been set</value>

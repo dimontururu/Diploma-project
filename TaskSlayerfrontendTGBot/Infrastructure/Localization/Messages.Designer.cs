@@ -328,19 +328,16 @@ namespace Infrastructure.Localization {
         
         /// <summary>
         ///   Ищет локализованную строку, похожую на 🆘 Help for TaskSlayer Heroes
-        ///
         ///You&apos;re not alone in this battle!
         ///Here’s what you can do:
         ///
-        ///✅ /To_do_list — your to-do lists (quests)
+        ///✅ /To_do_list — your list of all quests (ToDo-lists)
         ///📋 /list — current tasks inside a list
-        ///🎯 /goals — long-term goals
-        ///🏆 /stats — your progress, experience, and rewards
+        ///🏆 /Award — your progress, experience, and rewards
         ///⚙️ /Setting — your settings
         ///
-        ///🛠 Questions about the bot? Write to: @SupportTaskSlayer
-        ///
-        ///Go ahead, hero! The world awaits your achievements!.
+        ///🛠 Questions about the bot? Message: @dimon_tururu
+        ///Forward, hero! The world awaits your triumphs!.
         /// </summary>
         internal static string Help {
             get {
