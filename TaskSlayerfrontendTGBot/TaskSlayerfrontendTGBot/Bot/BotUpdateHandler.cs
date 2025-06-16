@@ -1,6 +1,8 @@
 ﻿using Application.Bot;
 using Application.Interfaces.Message;
 using Application.Session;
+using Infrastructure.Localization;
+using Telegram.Bot;
 using Telegram.Bot.Types;
 
 namespace Presentation.Bot
@@ -9,6 +11,7 @@ namespace Presentation.Bot
     {
         private readonly IEnumerable<IMessageHandler> _handlers;
         private readonly ISessionService _sessionService;
+        ITelegramBotClient _bot;
 
         public BotUpdateHandler(IEnumerable<IMessageHandler> handlers, ISessionService sessionService)
         {
@@ -50,6 +53,13 @@ namespace Presentation.Bot
                         }
                     }
                 }
+
+                var localization = new ResxLocalizer(_sessionService.GetLanguage(userId.Value));
+
+                await _bot.SendMessage(
+                    chatId: userId.Value,
+                    text: localization["UnknownMessage"]
+                );
             }
             catch { }
         }

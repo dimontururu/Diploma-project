@@ -318,4 +318,8 @@
   <data name="AwardsText" xml:space="preserve">
     <value>🏆 Твои награды:</value>
   </data>
+  <data name="UnknownMessage" xml:space="preserve">
+    <value>🤔 Похоже, я не понимаю, что с этим делать…
+Если ты не знаешь, с чего начать — воспользуйся командой 💙 /help.</value>
+  </data>
 </root>

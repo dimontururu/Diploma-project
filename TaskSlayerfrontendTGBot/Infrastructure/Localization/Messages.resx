@@ -317,4 +317,8 @@ Every completed quest is a chance for a rare bonus ✨</value>
   <data name="AwardsText" xml:space="preserve">
     <value>🏆 Your Awards:</value>
   </data>
+  <data name="UnknownMessage" xml:space="preserve">
+    <value>🤔 Hmm, I’m not sure what to do with that...
+If you're lost, try using 💙 /help to get some guidance.</value>
+  </data>
 </root>

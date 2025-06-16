@@ -522,6 +522,16 @@ namespace Infrastructure.Localization {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на 🤔 Hmm, I’m not sure what to do with that...
+        ///If you&apos;re lost, try using 💙 /help to get some guidance..
+        /// </summary>
+        internal static string UnknownMessage {
+            get {
+                return ResourceManager.GetString("UnknownMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Hello, friend 👋  
         ///🎮 Welcome to TaskSlayer — your gamified Todo list!  
         ///
