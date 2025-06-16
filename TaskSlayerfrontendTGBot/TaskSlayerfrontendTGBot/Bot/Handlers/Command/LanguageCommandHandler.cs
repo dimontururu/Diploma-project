@@ -1,35 +1,34 @@
-﻿using Application.Interfaces;
+﻿using Application.Bot;
 using Application.Interfaces.Localizer;
 using Application.Interfaces.Message;
+using Application.Session;
 using Infrastructure.Localization;
-using Telegram.Bot;
 using Telegram.Bot.Types;
-using Telegram.Bot.Types.ReplyMarkups;
 
 namespace Presentation.Bot.Handlers.Command
 {
     internal class LanguageCommandHandler : IStatefulMessageHandle
     {
-        private readonly ITelegramBotClient _bot;
         private readonly ISessionService _sessionService;
         private readonly ILanguageSelector _languageSelector;
+        private readonly ITelegramMessageService _telegramMessageService;
 
-        public LanguageCommandHandler(ITelegramBotClient bot, ISessionService sessionService, ILanguageSelector languageSelector)
+        public LanguageCommandHandler(ISessionService sessionService, ILanguageSelector languageSelector,ITelegramMessageService telegramMessageService)
         {
-            _bot = bot;
             _sessionService = sessionService;
             _languageSelector = languageSelector;
+            _telegramMessageService = telegramMessageService;
         }
 
         public async Task<bool> CanHandle(Update update)
         {
             if (update.Message?.Text == null) return false;
 
-            var chatId = update.Message.Chat.Id;
-            var localization = new ResxLocalizer(_sessionService.GetLanguage(chatId));
+            var userId = update.Message.From.Id;
+            var localization = new ResxLocalizer(_sessionService.GetLanguage(userId));
 
             var buttonLanguageText = localization["ButtonLanguage"];
-            return update.Message?.Text == buttonLanguageText;
+            return update.Message?.Text == buttonLanguageText || _languageSelector.DetectLanguageCommand(update.Message?.Text);
         }
 
         public async Task<bool> CanHandle(string state,Update update)
@@ -41,33 +40,13 @@ namespace Presentation.Bot.Handlers.Command
         public async Task HandleAsync(Update update)
         {
             var message = update.Message;
-            if (message == null) return;
-
             var chatId = message.Chat.Id;
-            var localization = new ResxLocalizer(_sessionService.GetLanguage(chatId));
+            var user = message.From;
+            var userId = user.Id;
 
             if (_sessionService.GetState(chatId) == null)
             {
-                var replyKeyboard = new ReplyKeyboardMarkup(
-                    new[]
-                    {
-                        new KeyboardButton[]
-                        {
-                            localization["ButtonLanguageEnglish"],
-                            localization["ButtonLanguageRussian"],
-                            localization["ButtonLanguageKazakh"]
-                        },
-                    })
-                {
-                    ResizeKeyboard = true,
-                    OneTimeKeyboard = true
-                };
-
-                await _bot.SendMessage(
-                    chatId: chatId,
-                    text: localization["SelectLanguage"],
-                    replyMarkup: replyKeyboard
-                );
+                await _telegramMessageService.SendSelectLanguageKeyboardMessage(userId, chatId);
 
                 _sessionService.SetState(chatId, "ButtonLanguage");
             }
@@ -75,10 +54,7 @@ namespace Presentation.Bot.Handlers.Command
             {
                 if (message?.Text == null)
                 {
-                    await _bot.SendMessage(
-                        chatId: chatId,
-                        text: localization["SelectLanguage"]
-                    );
+                    await _telegramMessageService.SendSelectLanguageMessage(userId, chatId);
                     return;
                 }
                 
@@ -86,33 +62,16 @@ namespace Presentation.Bot.Handlers.Command
 
                 if (selectedLanguage != null)
                 {
-                    _sessionService.SetLanguage(chatId, selectedLanguage);
-                    localization = new ResxLocalizer(_sessionService.GetLanguage(chatId));
+                    _sessionService.SetLanguage(userId, selectedLanguage);
 
-                    var replyKeyboard = new ReplyKeyboardMarkup(new[]
-                    {
-                        new KeyboardButton[] { localization["ButtonMenu"] }
-                    })
-                    {
-                        ResizeKeyboard = true,
-                        OneTimeKeyboard = true
-                    };
+                    await _telegramMessageService.SendLanguageSetConfirmationMessage(userId, chatId);
 
-                    await _bot.SendMessage(
-                        chatId: chatId,
-                        text: localization["LanguageSetConfirmation"],
-                        replyMarkup: replyKeyboard
-                    );
+                    _sessionService.ClearState(userId);
 
-                    _sessionService.ClearState(chatId);
+                    Console.WriteLine($"Пользовыатель: {user.Username} (id: {user.Id}) сменил язык");
                 }
                 else
-                {
-                    await _bot.SendMessage(
-                        chatId: chatId,
-                        text: localization["SelectLanguage"]
-                    );
-                }
+                    await _telegramMessageService.SendSelectLanguageMessage(userId,chatId);
             }
         }
     }

@@ -61,6 +61,117 @@ namespace Infrastructure.Localization {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на 📝 Enter a name for the new task.
+        ///Think of something memorable! ✨.
+        /// </summary>
+        internal static string AddCaseEnterNamePrompt {
+            get {
+                return ResourceManager.GetString("AddCaseEnterNamePrompt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на 📝 Enter a name for your new task list.
+        ///Make it something memorable! ✨.
+        /// </summary>
+        internal static string AddListEnterNamePrompt {
+            get {
+                return ResourceManager.GetString("AddListEnterNamePrompt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на 🎉 Congratulations! You&apos;ve earned a new award!
+        ///🏆 Check it out with: /Award.
+        /// </summary>
+        internal static string AwardGranted {
+            get {
+                return ResourceManager.GetString("AwardGranted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на 🏆 Your Awards:.
+        /// </summary>
+        internal static string AwardsText {
+            get {
+                return ResourceManager.GetString("AwardsText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на ➕ Add task.
+        /// </summary>
+        internal static string ButtonADDCase {
+            get {
+                return ResourceManager.GetString("ButtonADDCase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на ➕ Add list.
+        /// </summary>
+        internal static string ButtonADDToDoList {
+            get {
+                return ResourceManager.GetString("ButtonADDToDoList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на 🏆 Awards.
+        /// </summary>
+        internal static string ButtonAward {
+            get {
+                return ResourceManager.GetString("ButtonAward", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на ✅Completed.
+        /// </summary>
+        internal static string ButtonCompleted {
+            get {
+                return ResourceManager.GetString("ButtonCompleted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Delete Task 🗑️.
+        /// </summary>
+        internal static string ButtonDeleteCase {
+            get {
+                return ResourceManager.GetString("ButtonDeleteCase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Delete List 🗑️.
+        /// </summary>
+        internal static string ButtonDeleteToDoList {
+            get {
+                return ResourceManager.GetString("ButtonDeleteToDoList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на 🗑️ Delete.
+        /// </summary>
+        internal static string ButtonDeleteToDoListMini {
+            get {
+                return ResourceManager.GetString("ButtonDeleteToDoListMini", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на ✏ Edit.
+        /// </summary>
+        internal static string ButtonEditToDoList {
+            get {
+                return ResourceManager.GetString("ButtonEditToDoList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на 🌐 Language.
         /// </summary>
         internal static string ButtonLanguage {
@@ -115,11 +226,222 @@ namespace Infrastructure.Localization {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на 📋My lists.
+        /// </summary>
+        internal static string ButtonToDoList {
+            get {
+                return ResourceManager.GetString("ButtonToDoList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на 👁 View.
+        /// </summary>
+        internal static string ButtonViewToDoList {
+            get {
+                return ResourceManager.GetString("ButtonViewToDoList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на ✅ Task successfully deleted!.
+        /// </summary>
+        internal static string CaseDeleteedSuccess {
+            get {
+                return ResourceManager.GetString("CaseDeleteedSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на ✅ &lt;b&gt;Completed&lt;/b&gt;.
+        /// </summary>
+        internal static string Completed {
+            get {
+                return ResourceManager.GetString("Completed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на 🗑 Please enter the name of the list you want to delete..
+        /// </summary>
+        internal static string DeleteListEnterNamePrompt {
+            get {
+                return ResourceManager.GetString("DeleteListEnterNamePrompt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на 📝 Enter a new name for the task list..
+        /// </summary>
+        internal static string EditListEnterNamePrompt {
+            get {
+                return ResourceManager.GetString("EditListEnterNamePrompt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на 🗓 &lt;b&gt;Due&lt;/b&gt;.
+        /// </summary>
+        internal static string EndDate {
+            get {
+                return ResourceManager.GetString("EndDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на 📅 Please enter the due date for the task.
+        /// </summary>
+        internal static string EnterTaskDueDate {
+            get {
+                return ResourceManager.GetString("EnterTaskDueDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на 📅 Invalid date format!
+        ///Please enter the date in the format: &lt;b&gt;dd.MM.yyyy&lt;/b&gt;
+        ///For example: &lt;i&gt;14.06.2025&lt;/i&gt;.
+        /// </summary>
+        internal static string ErrorInvalidDate {
+            get {
+                return ResourceManager.GetString("ErrorInvalidDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на 👮‍♂️ Halt! The name is invalid. Use only letters, numbers, and no more than 50 characters. Try again!.
+        /// </summary>
+        internal static string ErrorInvalidNameOrTooLong {
+            get {
+                return ResourceManager.GetString("ErrorInvalidNameOrTooLong", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на 🎯 &lt;b&gt;Goals&lt;/b&gt;.
+        /// </summary>
+        internal static string Goals {
+            get {
+                return ResourceManager.GetString("Goals", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на 🆘 Help for TaskSlayer Heroes
+        ///
+        ///You&apos;re not alone in this battle!
+        ///Here’s what you can do:
+        ///
+        ///✅ /To_do_list — your to-do lists (quests)
+        ///📋 /list — current tasks inside a list
+        ///🎯 /goals — long-term goals
+        ///🏆 /stats — your progress, experience, and rewards
+        ///⚙️ /Setting — your settings
+        ///
+        ///🛠 Questions about the bot? Write to: @SupportTaskSlayer
+        ///
+        ///Go ahead, hero! The world awaits your achievements!.
+        /// </summary>
+        internal static string Help {
+            get {
+                return ResourceManager.GetString("Help", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на  ✅ Language has been set.
         /// </summary>
         internal static string LanguageSetConfirmation {
             get {
                 return ResourceManager.GetString("LanguageSetConfirmation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на ✅ List added successfully!  
+        ///Ready for new quests! 🚀.
+        /// </summary>
+        internal static string ListAddedSuccess {
+            get {
+                return ResourceManager.GetString("ListAddedSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на ✅ List successfully deleted!
+        ///Ready for new tasks! 🗂✨.
+        /// </summary>
+        internal static string ListDeleteedSuccess {
+            get {
+                return ResourceManager.GetString("ListDeleteedSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на ❗ Limit reached! You cannot create more than 10 lists.
+        /// </summary>
+        internal static string ListLimitError {
+            get {
+                return ResourceManager.GetString("ListLimitError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на 🏰 TaskSlayer Main Menu\n\nChoose where to start:\n\n✅ /To_do_list — your to-do lists\n🏆 /Awards — your awards\n🏰 /Menu — takes you back to the menu\n⚙️ /Setting — your settings\n💙 /help — help and tips\n\n💪 Win tasks — become a hero!.
+        /// </summary>
+        internal static string Menu {
+            get {
+                return ResourceManager.GetString("Menu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на You don’t have any awards yet 🏅
+        ///Complete tasks and the rewards will come!
+        ///Every completed quest is a chance for a rare bonus ✨.
+        /// </summary>
+        internal static string NoAwardsText {
+            get {
+                return ResourceManager.GetString("NoAwardsText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на ⏳ &lt;b&gt;Overdue&lt;/b&gt;.
+        /// </summary>
+        internal static string Overdue {
+            get {
+                return ResourceManager.GetString("Overdue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на 🔄 &lt;b&gt;In progress&lt;/b&gt;.
+        /// </summary>
+        internal static string Progress {
+            get {
+                return ResourceManager.GetString("Progress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на 📝 You don’t have any to-do lists yet.
+        ///👉 Let’s create your first one — just tap the button below! 🚀.
+        /// </summary>
+        internal static string RequestCreateCases {
+            get {
+                return ResourceManager.GetString("RequestCreateCases", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на 📭 You don&apos;t have any task lists yet.
+        ///
+        ///Create your first one and begin your journey to productivity! ⚔️.
+        /// </summary>
+        internal static string RequestCreateToDoList {
+            get {
+                return ResourceManager.GetString("RequestCreateToDoList", resourceCulture);
             }
         }
         
@@ -133,7 +455,92 @@ namespace Infrastructure.Localization {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Hello, friend 👋\n🎮 Welcome to TaskSlayer — your todo list game!\n\nYou are a hero in the world of tasks, and every checkbox is a victory over chaos! 🌟\n\n📜 How does it work?\n\nAdd tasks like quests.\n\nCheck off completed tasks — get experience and levels.\n\nEarn achievements and fight procrastination!\n\n⚔️ Your tools:\n✅ /To_do_list — view lists\n📋 /list — show active tasks\n🏆 /stats — your progress and rewards\n🎯 /goals — long-term missions\n💙/help — Don&apos;t be afraid to ask for help!\n\n🔥 Ready [остаток строки не уместился]&quot;;.
+        ///   Ищет локализованную строку, похожую на 📝 &lt;b&gt;Task Status&lt;/b&gt;.
+        /// </summary>
+        internal static string Status {
+            get {
+                return ResourceManager.GetString("Status", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Completed ✅.
+        /// </summary>
+        internal static string StatusCompleted {
+            get {
+                return ResourceManager.GetString("StatusCompleted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на  In Progress ⏳.
+        /// </summary>
+        internal static string StatusNotCompleted {
+            get {
+                return ResourceManager.GetString("StatusNotCompleted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Overdue ❗️.
+        /// </summary>
+        internal static string StatusOverdue {
+            get {
+                return ResourceManager.GetString("StatusOverdue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на ✅ Task successfully created!
+        ///Ready to get it done 💪
+        ///
+        ///.
+        /// </summary>
+        internal static string TaskCreatedSuccessfully {
+            get {
+                return ResourceManager.GetString("TaskCreatedSuccessfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на 📋 &lt;b&gt;Title&lt;/b&gt;.
+        /// </summary>
+        internal static string Title {
+            get {
+                return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на ⚠️ A list with this name already exists.
+        ///Please choose a different name. 📝.
+        /// </summary>
+        internal static string ToDoListAlreadyExists {
+            get {
+                return ResourceManager.GetString("ToDoListAlreadyExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Hello, friend 👋  
+        ///🎮 Welcome to TaskSlayer — your gamified Todo list!  
+        ///
+        ///You are a hero in the world of tasks, and every checkbox is a victory over chaos! 🌟  
+        ///
+        ///📜 How it works:  
+        ///
+        ///Add tasks like quests.  
+        ///Check them off — gain XP and level up.  
+        ///Earn achievements and battle procrastination!  
+        ///
+        ///⚔️ Your tools:  
+        ///✅ /To_do_list — your to-do lists  
+        ///🏆 /Awards — your rewards  
+        ///🏰 /Menu — back to main menu  
+        ///⚙️ /Setting — your settings  
+        ///💙 /help — help and tips  
+        ///
+        ///🔥 Ready to become a product [остаток строки не уместился]&quot;;.
         /// </summary>
         internal static string Welcome {
             get {
@@ -147,6 +554,15 @@ namespace Infrastructure.Localization {
         internal static string WhatWouldYouChange {
             get {
                 return ResourceManager.GetString("WhatWouldYouChange", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на &lt;b&gt;🗂 Your lists:&lt;/b&gt;.
+        /// </summary>
+        internal static string YourLists {
+            get {
+                return ResourceManager.GetString("YourLists", resourceCulture);
             }
         }
     }

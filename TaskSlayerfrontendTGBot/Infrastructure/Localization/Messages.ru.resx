@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ButtonADDToDoList" xml:space="preserve">
+    <value>➕ Добавить список</value>
+  </data>
   <data name="ButtonLanguage" xml:space="preserve">
     <value>🌐 Язык</value>
   </data>
@@ -135,16 +138,184 @@
   <data name="ButtonSetting" xml:space="preserve">
     <value>⚙️Настройки</value>
   </data>
+  <data name="ButtonToDoList" xml:space="preserve">
+    <value>📋Мои списки</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>🆘 Помощь героям TaskSlayer
+Ты не один в этом бою!
+Вот что ты можешь делать:
+
+✅ /To_do_list — список всех твоих квестов (ToDo-листов)
+📋 /list — текущие задания внутри списка
+🎯 /goals — долгосрочные цели
+🏆 /stats — твой прогресс, опыт и награды
+⚙️ /Setting — твои настройки
+
+🛠 Вопросы по работе бота? Напиши сюда: @SupportTaskSlayer
+
+Вперёд, герой! Мир ждёт твоих свершений!</value>
+  </data>
   <data name="LanguageSetConfirmation" xml:space="preserve">
     <value>✅ Язык установлен</value>
+  </data>
+  <data name="Menu" xml:space="preserve">
+    <value>🏰 Главное меню TaskSlayer\n\nВыбери, с чего начнем:\n\n✅ /To_do_list — твои списки дел\n🏆 /Awards — твои награды\n🏰 /Menu — вернёт тебя в меню\n⚙️ /Setting — твои настройки\n💙 /help — помощь и подсказки\n\n💪 Побеждай задачи — становись героем!</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>📋 &lt;b&gt;Название&lt;/b&gt;</value>
+  </data>
+  <data name="RequestCreateToDoList" xml:space="preserve">
+    <value>📭 У тебя пока нет ни одного списка дел.
+
+Создай свой первый список и начни путь продуктивного героя! ⚔️</value>
   </data>
   <data name="SelectLanguage" xml:space="preserve">
     <value>🌐 Выберите язык</value>
   </data>
   <data name="Welcome" xml:space="preserve">
-    <value>Привет, друг 👋\n🎮 Добро пожаловать в TaskSlayer — твой игровой Todo-лист!\n\nТы — герой в мире задач, и каждый чекбокс — это победа над хаосом! 🌟\n\n📜 Как это работает?\n\nДобавляй задачи, как квесты.\n\nОтмечай выполненные задачи — получай опыт и уровни.\n\nЗарабатывай достижения и сражайся с прокрастинацией!\n\n⚔️ Твои инструменты:\n✅ /To_do_list — посмотреть списки\n📋 /list — показать активные задания\n🏆 /stats — твой прогресс и награды\n🎯 /goals — долгосрочные миссии\n💙/help — Не бойся просить помощи!\n\n🔥 Готов стать легендой продуктивности? Тогда в бой!</value>
+    <value>Привет, друг 👋  
+🎮 Добро пожаловать в TaskSlayer — твой игровой Todo-лист!  
+
+Ты — герой в мире задач, и каждый чекбокс — это победа над хаосом! 🌟  
+
+📜 Как это работает?  
+
+Добавляй задачи, как квесты.  
+Отмечай выполненные задачи — получай опыт и уровни.  
+Зарабатывай достижения и сражайся с прокрастинацией!  
+
+⚔️ Твои инструменты:  
+✅ /To_do_list — твои списки дел  
+🏆 /Awards — твои награды  
+🏰 /Menu — вернёт тебя в меню  
+⚙️ /Setting — твои настройки  
+💙 /help — помощь и подсказки  
+
+🔥 Готов стать легендой продуктивности? Тогда в бой!</value>
   </data>
   <data name="WhatWouldYouChange" xml:space="preserve">
     <value>🛠 Что бы вы изменили?</value>
+  </data>
+  <data name="YourLists" xml:space="preserve">
+    <value>&lt;b&gt;🗂 Ваши списки:&lt;/b&gt;</value>
+  </data>
+  <data name="Goals" xml:space="preserve">
+    <value>🎯 &lt;b&gt;Целей&lt;/b&gt;</value>
+  </data>
+  <data name="Completed" xml:space="preserve">
+    <value>✅ &lt;b&gt;Выполнено&lt;/b&gt;</value>
+  </data>
+  <data name="Progress" xml:space="preserve">
+    <value>🔄 &lt;b&gt;В процессе&lt;/b&gt;</value>
+  </data>
+  <data name="Overdue" xml:space="preserve">
+    <value>⏳ &lt;b&gt;Просроченные&lt;/b&gt;</value>
+  </data>
+  <data name="ButtonDeleteToDoList" xml:space="preserve">
+    <value>Удалить список 🗑️</value>
+  </data>
+  <data name="AddListEnterNamePrompt" xml:space="preserve">
+    <value>📝 Введи имя для нового списка задач.
+Придумай что-нибудь запоминающееся! ✨</value>
+  </data>
+  <data name="ListAddedSuccess" xml:space="preserve">
+    <value>✅ Список успешно добавлен!  
+Готов к новым задачам! 🚀</value>
+  </data>
+  <data name="ErrorInvalidNameOrTooLong" xml:space="preserve">
+    <value>👮‍♂️ Остановитесь! Имя недопустимо. Только буквы, цифры и не длиннее 50 символов. Попробуйте ещё раз!</value>
+  </data>
+  <data name="ListLimitError" xml:space="preserve">
+    <value>❗ Превышен лимит! Вы не можете создать более 10 списков.</value>
+  </data>
+  <data name="DeleteListEnterNamePrompt" xml:space="preserve">
+    <value>🗑 Пожалуйста, введите название списка, который вы хотите удалить.</value>
+  </data>
+  <data name="ListDeleteedSuccess" xml:space="preserve">
+    <value>✅ Список успешно удалён!
+Готов к новым задачам! 🗂✨</value>
+  </data>
+  <data name="ToDoListAlreadyExists" xml:space="preserve">
+    <value>⚠️ Список с таким названием уже существует.
+Попробуйте ввести другое имя. 📝</value>
+  </data>
+  <data name="ButtonEditToDoList" xml:space="preserve">
+    <value>✏ Изменить</value>
+  </data>
+  <data name="ButtonViewToDoList" xml:space="preserve">
+    <value>👁 Посмотреть</value>
+  </data>
+  <data name="ButtonDeleteToDoListMini" xml:space="preserve">
+    <value>🗑️ Удалить</value>
+  </data>
+  <data name="EditListEnterNamePrompt" xml:space="preserve">
+    <value>📝 Введи новое имя для списка задач.</value>
+  </data>
+  <data name="RequestCreateCases" xml:space="preserve">
+    <value>📝 Пока у тебя нет ни одного списка дел.
+👉 Давай создадим первый — просто нажми кнопку ниже! 🚀</value>
+  </data>
+  <data name="ButtonADDCase" xml:space="preserve">
+    <value>➕ Добавить задачу</value>
+  </data>
+  <data name="ButtonDeleteCase" xml:space="preserve">
+    <value>Удалить задачу 🗑️</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>📝 &lt;b&gt;Статус задачи&lt;/b&gt;</value>
+  </data>
+  <data name="StatusOverdue" xml:space="preserve">
+    <value>Просрочено ❗️</value>
+  </data>
+  <data name="StatusCompleted" xml:space="preserve">
+    <value>Завершено ✅</value>
+  </data>
+  <data name="StatusNotCompleted" xml:space="preserve">
+    <value>В процессе ⏳</value>
+  </data>
+  <data name="EndDate" xml:space="preserve">
+    <value>🗓 &lt;b&gt;До&lt;/b&gt;</value>
+  </data>
+  <data name="AddCaseEnterNamePrompt" xml:space="preserve">
+    <value>📝 Введи имя для новой задачи.
+Придумай что-нибудь запоминающееся! ✨</value>
+  </data>
+  <data name="EnterTaskDueDate" xml:space="preserve">
+    <value>📅 Пожалуйста, введите дату окончания задачи</value>
+  </data>
+  <data name="TaskCreatedSuccessfully" xml:space="preserve">
+    <value>✅ Задача успешно создана!
+Готово к выполнению 💪</value>
+  </data>
+  <data name="ErrorInvalidDate" xml:space="preserve">
+    <value>📅 Неверный формат даты!
+Пожалуйста, введите дату в формате: &lt;b&gt;дд.мм.гггг&lt;/b&gt;
+Например: &lt;i&gt;14.06.2025&lt;/i&gt;
+
+</value>
+  </data>
+  <data name="CaseDeleteedSuccess" xml:space="preserve">
+    <value>✅ Задача успешна удалена!</value>
+  </data>
+  <data name="AwardGranted" xml:space="preserve">
+    <value>🎉 Поздравляем! Ты получил новую награду!
+🏆 Проверь её с помощью команды: /Award</value>
+  </data>
+  <data name="ButtonCompleted" xml:space="preserve">
+    <value>✅Выполнено</value>
+  </data>
+  <data name="ButtonAward" xml:space="preserve">
+    <value>🏆 Награды</value>
+  </data>
+  <data name="NoAwardsText" xml:space="preserve">
+    <value>У тебя пока нет наград 🏅
+Выполняй задачи, и награды обязательно найдут тебя!
+Каждая выполненная задача — шанс получить редкий бонус ✨
+
+</value>
+  </data>
+  <data name="AwardsText" xml:space="preserve">
+    <value>🏆 Твои награды:</value>
   </data>
 </root>

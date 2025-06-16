@@ -1,9 +1,10 @@
-﻿using Application.Interfaces;
+﻿using Application.Bot;
+using Application.Interfaces;
 using Telegram.Bot;
 
 namespace TaskSlayerfrontendTGBot.Services
 {
-    internal class BotService: IBotServices
+    internal class BotService: IBotService
     {
         private readonly ITelegramBotClient _botClient;
         private readonly IBotUpdateHandler _UpdateHandler;

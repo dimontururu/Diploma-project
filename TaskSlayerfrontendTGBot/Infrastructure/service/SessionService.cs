@@ -1,4 +1,7 @@
-﻿using Application.Interfaces;
+﻿using Application.Interfaces.ApiClients;
+using Application.Session;
+using Domain.DTOs.User;
+using Infrastructure.Api;
 
 namespace Infrastructure.service
 {
@@ -6,11 +9,15 @@ namespace Infrastructure.service
     {
         private readonly Dictionary<long, string> _userStates = new();
         private readonly Dictionary<long, string> _userLangs = new();
-        private readonly IUserTokenStorage _userTokenStorage;
+        private readonly Dictionary<UserDTO, IUserScopedApiClient> _userApi = new();
 
-        public SessionService(IUserTokenStorage userTokenStorage)
+        private readonly HttpClient _httpClient;
+        private readonly ITaskSlayerApiClient _taskSlayerApiClient;
+
+        public SessionService(HttpClient http, ITaskSlayerApiClient taskSlayerApiClient)
         {
-            _userTokenStorage = userTokenStorage;
+            _httpClient = http;
+            _taskSlayerApiClient = taskSlayerApiClient;
         }
 
         public void SetState(long userId, string state) => _userStates[userId] = state;
@@ -18,19 +25,16 @@ namespace Infrastructure.service
         public void ClearState(long userId) => _userStates.Remove(userId);
         public void SetLanguage(long userId, string langCode) => _userLangs[userId] = langCode;
         public string GetLanguage(long userId) => _userLangs.TryGetValue(userId, out var lang) ? lang : "ru";
-
-        public async Task<string> GetTokenAsync(string userId)
+        public IUserScopedApiClient GetApi(UserDTO user)
         {
-            var token = await _userTokenStorage.GetTokenAsync(userId);
-            if (token == null)
+            var result = _userApi.GetValueOrDefault(user);
+            if (result == null)
             {
-                throw new Exception("Token not found");
+                result =  new UserScopedApiClient(_httpClient, Environment.GetEnvironmentVariable("base__Url"),user,_taskSlayerApiClient);
+                _userApi[user] = result;
             }
-            return token;
+
+            return result;
         }
-
-        public async Task SetTokenAsync(string userId, string token)=>await _userTokenStorage.SetTokenAsync(userId, token);
-
-        public async Task RefreshTokenAsync(string userId,string token)=>await SetTokenAsync(userId, token);
     }
 }

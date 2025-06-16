@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ButtonADDToDoList" xml:space="preserve">
+    <value>➕ Тізім қосу</value>
+  </data>
   <data name="ButtonLanguage" xml:space="preserve">
     <value>🌐 Тіл</value>
   </data>
@@ -135,16 +138,185 @@
   <data name="ButtonSetting" xml:space="preserve">
     <value>⚙️Параметрлер</value>
   </data>
+  <data name="ButtonToDoList" xml:space="preserve">
+    <value>📋Менің тізімдерім</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>🆘 TaskSlayer Батырларына Көмек
+
+Сіз осы шайқаста жалғыз емессіз!
+Мына әрекеттерді орындауға болады:
+
+✅ /To_do_list — барлық тапсырмаларыңыздың тізімі (ToDo)
+📋 /list — тізім ішіндегі ағымдағы тапсырмалар
+🎯 /goals — ұзақ мерзімді мақсаттар
+🏆 /stats — сіздің жетістіктеріңіз, тәжірибе және сыйақылар
+⚙️ /Setting — баптауларыңыз
+
+🛠 Ботпен жұмысқа қатысты сұрақтар? Жазыңыз: @SupportTaskSlayer
+
+Алға, батыр! Әлем сенің жетістіктеріңді күтуде!</value>
+  </data>
   <data name="LanguageSetConfirmation" xml:space="preserve">
     <value> ✅ Тіл орнатылды</value>
+  </data>
+  <data name="Menu" xml:space="preserve">
+    <value>🏰 TaskSlayer негізгі мәзірі\n\nБастау орнын таңдаңыз:\n\n✅ /To_do_list — істер тізімдері\n🏆 /Awards — марапаттарыңыз\n🏰 /Menu — сізді мәзірге қайтарады\n⚙️ /Setting — сіздің баптауларыңыз\n💙 /help — тапсырманы жеңіп алыңыз!</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>📋 &lt;b&gt;Атауы&lt;/b&gt;</value>
+  </data>
+  <data name="RequestCreateToDoList" xml:space="preserve">
+    <value>📭 Әзірге ешқандай тапсырма тізімің жоқ.
+
+Алғашқы тізімді жасап, өнімділік жолын баста! ⚔️</value>
   </data>
   <data name="SelectLanguage" xml:space="preserve">
     <value>🌐 Тілді таңдаңыз</value>
   </data>
   <data name="Welcome" xml:space="preserve">
-    <value>Сәлем, досым 👋\n🎮 TaskSlayer қолданбасына қош келдіңіз — сіздің ойын тапсырмалар тізіміңіз!\n\nСіз тапсырмалар әлеміндегі кейіпкерсіз, және әрбір құсбелгі – хаосты жеңу! 🌟\n\n📜 Бұл қалай жұмыс істейді?\n\nКвесттер сияқты тапсырмаларды қосыңыз.\n\nОрындалған тапсырмаларды белгілеңіз — тәжірибе мен деңгейге ие болыңыз.\n\nЖетістікке жетіп, кейінге қалдырумен күресіңіз!\n\n⚔️ Құралдарыңыз:\n✅ /To_do_list — тізімдерді көру\n📋 /list — белсенді тапсырмаларды көрсету\n🏆 /stats — сіздің үлгеріміңіз бен марапаттарыңыз\n🎯 /goals — ұзақ мерзімді миссиялар\n💙/help — Көмек сұраудан қорықпаңыз!\n\n🔥 Өнімділік аңызына айналуға дайынсыз ба? Онда кеттік!</value>
+    <value>Сәлем, досым 👋  
+🎮 TaskSlayer-ға қош келдің — бұл сенің ойын түріндегі тапсырма тізімің!  
+
+Сен — тапсырмалар әлеміндегі қаһармансың, әрбір чекбокс — тәртіпсіздікке қарсы жеңіс! 🌟  
+
+📜 Қалай жұмыс істейді?  
+
+Тапсырмаларды квест ретінде қос.  
+Орындап белгілеген сайын — тәжірибе жинап, деңгей арттыр.  
+Жетістіктерге жетіп, жалқаулықпен күрес!  
+
+⚔️ Құралдарың:  
+✅ /To_do_list — тапсырмалар тізімі  
+🏆 /Awards — марапаттарың  
+🏰 /Menu — басты мәзірге оралу  
+⚙️ /Setting — баптауларың  
+💙 /help — көмек пен кеңестер  
+
+🔥 Өнімділіктің аңызына айналуға дайынсың ба? Онда алға!</value>
   </data>
   <data name="WhatWouldYouChange" xml:space="preserve">
     <value>🛠 Сіз не өзгерткіңіз келеді?</value>
+  </data>
+  <data name="YourLists" xml:space="preserve">
+    <value>&lt;b&gt;🗂 Тізімдеріңіз:&lt;/b&gt;</value>
+  </data>
+  <data name="Goals" xml:space="preserve">
+    <value>🎯 &lt;b&gt;Мақсаттар&lt;/b&gt;</value>
+  </data>
+  <data name="Completed" xml:space="preserve">
+    <value>✅ &lt;b&gt;Аяқталған&lt;/b&gt;</value>
+  </data>
+  <data name="Progress" xml:space="preserve">
+    <value>🔄 &lt;b&gt;Үдерісте&lt;/b&gt;</value>
+  </data>
+  <data name="Overdue" xml:space="preserve">
+    <value>⏳ &lt;b&gt;Кешіктірілген&lt;/b&gt;</value>
+  </data>
+  <data name="ButtonDeleteToDoList" xml:space="preserve">
+    <value>Тізімді жою 🗑️</value>
+  </data>
+  <data name="AddListEnterNamePrompt" xml:space="preserve">
+    <value>📝 Жаңа тапсырмалар тізіміне атау енгізіңіз.
+Есте қаларлықтай атау ойлап табыңыз! ✨</value>
+  </data>
+  <data name="ListAddedSuccess" xml:space="preserve">
+    <value>✅ Тізім сәтті қосылды!  
+Жаңа тапсырмаларға дайынсыз! 🚀</value>
+  </data>
+  <data name="ErrorInvalidNameOrTooLong" xml:space="preserve">
+    <value>👮‍♂️ Тоқта! Атау жарамсыз. Тек әріптер мен сандар, ұзындығы 50 таңбадан аспауы керек. Қайта енгізіңіз!</value>
+  </data>
+  <data name="ListLimitError" xml:space="preserve">
+    <value>❗ Шек қою ауқымы асырылды! 10 тізімнен артық жасауға болмайды.</value>
+  </data>
+  <data name="DeleteListEnterNamePrompt" xml:space="preserve">
+    <value>🗑 Өшіру үшін тізімнің атауын енгізіңіз.</value>
+  </data>
+  <data name="ListDeleteedSuccess" xml:space="preserve">
+    <value>✅ Тізім сәтті өшірілді!
+Жаңа тапсырмаларға дайынмын! 🗂✨</value>
+  </data>
+  <data name="ToDoListAlreadyExists" xml:space="preserve">
+    <value>⚠️ Мұндай атауы бар тізім бұрыннан бар.
+Басқа атау енгізіңіз. 📝</value>
+  </data>
+  <data name="ButtonEditToDoList" xml:space="preserve">
+    <value>✏ Өңдеу</value>
+  </data>
+  <data name="ButtonViewToDoList" xml:space="preserve">
+    <value>👁 Көру</value>
+  </data>
+  <data name="ButtonDeleteToDoListMini" xml:space="preserve">
+    <value>🗑️ Тізімді</value>
+  </data>
+  <data name="EditListEnterNamePrompt" xml:space="preserve">
+    <value>📝 Тапсырмалар тізімі үшін жаңа атау енгізіңіз.</value>
+  </data>
+  <data name="RequestCreateCases" xml:space="preserve">
+    <value>📝 Сіздің ешқандай тапсырмалар тізіміңіз жоқ.
+👉 Алғашқысын бірге құрайық — төмендегі батырманы басыңыз! 🚀</value>
+  </data>
+  <data name="ButtonADDCase" xml:space="preserve">
+    <value>➕ Тапсырма қосу</value>
+  </data>
+  <data name="ButtonDeleteCase" xml:space="preserve">
+    <value>Тапсырманы жою 🗑️</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>📝 &lt;b&gt;Тапсырманың күйі&lt;/b&gt;</value>
+  </data>
+  <data name="StatusOverdue" xml:space="preserve">
+    <value>Мерзімі өтіп кеткен ❗️</value>
+  </data>
+  <data name="StatusCompleted" xml:space="preserve">
+    <value>Аяқталды ✅</value>
+  </data>
+  <data name="StatusNotCompleted" xml:space="preserve">
+    <value>Орындау үстінде ⏳</value>
+  </data>
+  <data name="EndDate" xml:space="preserve">
+    <value>🗓 &lt;b&gt;Дейін&lt;/b&gt;</value>
+  </data>
+  <data name="AddCaseEnterNamePrompt" xml:space="preserve">
+    <value>📝 Жаңа тапсырма үшін атау енгізіңіз.
+Есте қалатын нәрсені ойлаңыз! ✨</value>
+  </data>
+  <data name="EnterTaskDueDate" xml:space="preserve">
+    <value>📅 Тапсырманың аяқталу күнін енгізіңіз</value>
+  </data>
+  <data name="TaskCreatedSuccessfully" xml:space="preserve">
+    <value>✅ Тапсырма сәтті құрылды!
+Орындауға дайын 💪</value>
+  </data>
+  <data name="ErrorInvalidDate" xml:space="preserve">
+    <value>📅 Күн форматы қате!
+Күнді &lt;b&gt;кк.аа.жжжж&lt;/b&gt; форматында енгізіңіз
+Мысалы: &lt;i&gt;14.06.2025&lt;/i&gt;</value>
+  </data>
+  <data name="CaseDeleteedSuccess" xml:space="preserve">
+    <value>✅ Тапсырма сәтті жойылды!</value>
+  </data>
+  <data name="AwardGranted" xml:space="preserve">
+    <value>🎉 Құттықтаймыз! Жаңа марапат алдың!
+🏆 Көру үшін /Award командасын қолдан.
+
+</value>
+  </data>
+  <data name="ButtonCompleted" xml:space="preserve">
+    <value>✅Аяқталған</value>
+  </data>
+  <data name="ButtonAward" xml:space="preserve">
+    <value>🏆 Марапаттары</value>
+  </data>
+  <data name="NoAwardsText" xml:space="preserve">
+    <value>Сенде әлі марапаттар жоқ 🏅
+Тапсырмаларды орында, марапаттар міндетті түрде келеді!
+Әр аяқталған іс — сирек бонус алуға мүмкіндік ✨
+
+</value>
+  </data>
+  <data name="AwardsText" xml:space="preserve">
+    <value>🏆 Сенің марапаттарың:</value>
   </data>
 </root>

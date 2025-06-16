@@ -1,5 +1,6 @@
-﻿using Application.Interfaces;
+﻿using Application.Bot;
 using Application.Interfaces.Message;
+using Application.Session;
 using Telegram.Bot.Types;
 
 namespace Presentation.Bot
@@ -17,33 +18,40 @@ namespace Presentation.Bot
 
         public async Task HandleAsync(Update update)
         {
-            var userId = update.Message?.From?.Id ?? update.CallbackQuery?.From?.Id;
-
-
-            if (userId != null)
+            try
             {
-                string state = _sessionService.GetState(userId.Value);
-                if (state != null)
+                var userId = update.Message?.From?.Id ?? update.CallbackQuery?.From?.Id;
+
+                foreach (var handler in _handlers)
                 {
-                    foreach (var handler in _handlers.OfType<IStatefulMessageHandle>())
+                    if (await handler.CanHandle(update))
                     {
-                        if (await handler.CanHandle(state, update))
+                        if (userId != null)
                         {
-                            await handler.HandleAsync(update);
-                            return;
+                            _sessionService.ClearState(userId.Value);
+                        }
+                        await handler.HandleAsync(update);
+                        return;
+                    }
+                }
+
+                if (userId != null)
+                {
+                    string state = _sessionService.GetState(userId.Value);
+                    if (state != null || update.CallbackQuery != null)
+                    {
+                        foreach (var handler in _handlers.OfType<IStatefulMessageHandle>())
+                        {
+                            if (await handler.CanHandle(state, update))
+                            {
+                                await handler.HandleAsync(update);
+                                return;
+                            }
                         }
                     }
                 }
             }
-
-            foreach (var handler in _handlers)
-            {
-                if (await handler.CanHandle(update))
-                {
-                    await handler.HandleAsync(update);
-                    break;
-                }
-            }
+            catch { }
         }
     }
 }

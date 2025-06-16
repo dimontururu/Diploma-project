@@ -31,7 +31,11 @@ namespace Presentation.Bot.Handlers
         {
             var chatId = update.MyChatMember.Chat.Id;
 
-            await _bot.LeaveChat(chatId);
+            try
+            {
+                await _bot.LeaveChat(chatId);
+            }
+            catch { }
             return;
         }
     }

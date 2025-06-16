@@ -1,34 +1,26 @@
-﻿using Application.Interfaces;
+﻿using Application.Bot;
 using Application.Interfaces.Message;
-using Infrastructure.Localization;
-using Telegram.Bot;
+using Application.Services.Domain;
 using Telegram.Bot.Types;
-using Telegram.Bot.Types.ReplyMarkups;
 
 namespace Presentation.Bot.Handlers.Command
 {
     public class StartCommandHandler : IMessageHandler
     {
-        private readonly ITelegramBotClient _bot;
-        private readonly ISessionService _sessionService;
-        private readonly IApiRetryHelper _apiRetryHelper;
+        private readonly IUserService _userService;
+        private readonly ITelegramMessageService _telegramMessageService;
 
-        public StartCommandHandler(ITelegramBotClient bot, ISessionService sessionService, IApiRetryHelper apiRetryHelper) 
+        public StartCommandHandler(IUserService userService,ITelegramMessageService telegramMessageService) 
         { 
-            _bot = bot;
-            _sessionService = sessionService;
-            _apiRetryHelper = apiRetryHelper;
+            _userService = userService;
+            _telegramMessageService = telegramMessageService;
         }
 
         public async Task<bool> CanHandle(Update update)
         {
             if (update.Message?.Text == null) return false;
 
-            var chatId = update.Message?.Chat?.Id;
-
-            var localization = new ResxLocalizer(_sessionService.GetLanguage(chatId.Value));
-
-            return update.Message?.Text == "/start" || update.Message?.Text == localization["ButtonMenu"];
+            return update.Message?.Text == "/start";
         }
 
         public async Task HandleAsync(Update update)
@@ -37,29 +29,10 @@ namespace Presentation.Bot.Handlers.Command
             var chatId = message.Chat.Id;
             var user = message.From;
 
-            var localization = new ResxLocalizer(_sessionService.GetLanguage(chatId));
+            await _telegramMessageService.SendWelcomeMessage(user.Id, chatId);
+            await _userService.CreateUser(user);
 
-            string welcomeText = localization["Welcome"];
-
-            var replyKeyboard = new ReplyKeyboardMarkup
-                (new[]{
-                    new KeyboardButton[] {localization["ButtonSetting"]},
-                })
-            {
-                ResizeKeyboard = true,
-                OneTimeKeyboard = true
-            };
-
-            await _bot.SendMessage(
-                chatId: chatId,
-                text: welcomeText,
-                replyMarkup: replyKeyboard
-            );
-            
-            _apiRetryHelper.ExecuteWithReauthAsync(chatId, async _ =>
-            {
-                return await _apiClient.GetToDoListsAsync(userId);
-            });
+            Console.WriteLine($"Пользовыатель: {user.Username} (id: {user.Id}) добавлен в базу");
         }
     }
 }

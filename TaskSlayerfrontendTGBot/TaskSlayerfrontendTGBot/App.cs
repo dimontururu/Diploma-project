@@ -1,11 +1,11 @@
-﻿using Application.Interfaces;
+﻿using Application.Bot;
 
 namespace TaskSlayerfrontendTGBot
 {
     internal class App
     {
-        IBotServices _bot;
-        public App(IBotServices bot) 
+        IBotService _bot;
+        public App(IBotService bot) 
         {
             _bot = bot;
         }

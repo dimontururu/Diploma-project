@@ -1,4 +1,5 @@
-﻿using Application.Interfaces;
+﻿using Application.Bot;
+using Application.Interfaces;
 using Application.Interfaces.Message;
 using Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
@@ -13,9 +14,10 @@ class Program
 {
     static async Task Main(string[] args)
     {
+        Console.Clear();
         var serviceProvider = new ServiceCollection()
                .AddScoped<App>()
-               .AddScoped<IBotServices, BotService>()
+               .AddScoped<IBotService, BotService>()
                .AddSingleton<ITelegramBotClient>(_ => new TelegramBotClient(Environment.GetEnvironmentVariable("Bot__token")))
                .AddScoped<IBotUpdateHandler, BotUpdateHandler>()
                .AddScoped<IHandleError, HandleError>()
@@ -23,13 +25,20 @@ class Program
                .AddScoped<IMessageHandler,SettingCommandHandler>()
                .AddScoped<IMessageHandler, LanguageCommandHandler>()
                .AddScoped<IMessageHandler, BotAddedToChatHandler>()
+               .AddScoped<IMessageHandler, MenuCommandHandler>()
+               .AddScoped<IMessageHandler, HelpCommandHandler>()
+               .AddScoped<IMessageHandler, ToDoListCommandHandler>()
+               .AddScoped<IMessageHandler, ADDToDoListCommandHandler>()
+               .AddScoped<IMessageHandler,DeleteToDoListCommandHandler>()
+               .AddScoped<IMessageHandler, InlineKeyboardButtonCommandHandler>()
+               .AddScoped<IMessageHandler, EditToDoListCommandHandler>()
+               .AddScoped<IMessageHandler, ViewToDoListCommandHandler>()
+               .AddScoped<IMessageHandler, ADDCaseCommandHandler>()
+               .AddScoped<IMessageHandler, DeleteCaseCommandHandler>()
+               .AddScoped<IMessageHandler, EditCaseCommandHandler>()
+               .AddScoped<IMessageHandler, AwardCommandHandler>()
+               .AddSingleton<HttpClient>()
                .InfrastructureADD()
-               //.AddSingleton<IUserStateService, UserStateService>()
-               //.AddScoped<IHandleUpdate,HandleUpdate>()
-               //.AddScoped<IHandelCommand,HandelCommand>()
-               //.AddScoped<IHandelCallbackQuery,HandelCallbackQuery>()
-               //.AddSingleton<IHandleUserState,HandleUserState>()
-               //.AddScoped<TaskServiceApiClient>(_ => new TaskServiceApiClient(Environment.GetEnvironmentVariable("base__Url"),new HttpClient()))
                .BuildServiceProvider();
 
         var app = serviceProvider.GetService<App>();

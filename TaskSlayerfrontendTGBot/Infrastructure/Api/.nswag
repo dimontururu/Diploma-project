@@ -1,0 +1,18 @@
+{
+  "runtime": "Net90",
+  "codeGenerators": {
+    "openApiToCSharpClient": {
+      "className": "TaskSlayerApiClient",
+      "namespace": "Infrastructure.Api",
+      "generateClientInterfaces": true,
+      "generateOptionalParameters": true,
+      "generatePartialClasses": true,
+      "output": "TaskSlayerApiClient.cs"
+    }
+  },
+  "documentGenerator": {
+    "fromDocument": {
+      "url": "http://188.126.47.23:32777/swagger/v1/swagger.json"
+    }
+  }
+}
