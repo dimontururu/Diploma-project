@@ -44,7 +44,5 @@ class Program
         var app = serviceProvider.GetService<App>();
 
         await app.Run();
-
-        Console.ReadLine();
     }
 }

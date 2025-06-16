@@ -9,19 +9,19 @@ FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /src
 
 # 1. Сначала копируем ВСЕ файлы проектов
-COPY ["task-service/Presentation.csproj", "task-service/"]
+COPY ["Presentation/Presentation.csproj", "Presentation/"]
 COPY ["Application/Application.csproj", "Application/"]
 COPY ["Infrastructure/Infrastructure.csproj", "Infrastructure/"]
 COPY ["Domain/Domain.csproj", "Domain/"]
 
 # 2. Восстанавливаем зависимости
-RUN dotnet restore "task-service/Presentation.csproj"
+RUN dotnet restore "Presentation/Presentation.csproj"
 
 # 3. Копируем весь остальной код
 COPY . .
 
 # 4. Собираем проект
-WORKDIR "/src/task-service"
+WORKDIR "/src/Presentation"
 RUN dotnet build "Presentation.csproj" -c Release -o /app/build
 
 # Этап публикации

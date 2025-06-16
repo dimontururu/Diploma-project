@@ -10,19 +10,19 @@ WORKDIR /app
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["TaskSlayerfrontendTGBot/TaskSlayerfrontendTGBot.csproj", "TaskSlayerfrontendTGBot/"]
-RUN dotnet restore "./TaskSlayerfrontendTGBot/TaskSlayerfrontendTGBot.csproj"
+COPY ["Presentation/Presentation.csproj", "Presentation/"]
+RUN dotnet restore "./Presentation/Presentation.csproj"
 COPY . .
-WORKDIR "/src/TaskSlayerfrontendTGBot"
-RUN dotnet build "./TaskSlayerfrontendTGBot.csproj" -c $BUILD_CONFIGURATION -o /app/build
+WORKDIR "/src/Presentation"
+RUN dotnet build "./Presentation.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 # Этот этап используется для публикации проекта службы, который будет скопирован на последний этап
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./TaskSlayerfrontendTGBot.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "./Presentation.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 # Этот этап используется в рабочей среде или при запуске из VS в обычном режиме (по умолчанию, когда конфигурация отладки не используется)
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "TaskSlayerfrontendTGBot.dll"]
+ENTRYPOINT ["dotnet", "Presentation.dll"]

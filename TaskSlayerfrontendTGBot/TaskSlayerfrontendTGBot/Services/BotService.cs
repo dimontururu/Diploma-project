@@ -1,5 +1,6 @@
 ﻿using Application.Bot;
 using Application.Interfaces;
+using System.Threading;
 using Telegram.Bot;
 
 namespace TaskSlayerfrontendTGBot.Services
@@ -19,13 +20,17 @@ namespace TaskSlayerfrontendTGBot.Services
 
         public async Task Start()
         {
+            var cancellationTokenSource = new CancellationTokenSource();
             _botClient.StartReceiving(
                 updateHandler: async (TelegramBotClient,update,CancellationToken) => 
                 {
                     await _UpdateHandler.HandleAsync(update); 
                 },
-                errorHandler: _handleError.HandleErrorAsync
+                errorHandler: _handleError.HandleErrorAsync,
+                cancellationToken: cancellationTokenSource.Token
             );
+
+            await Task.Delay(Timeout.Infinite, cancellationTokenSource.Token);
         }
     }
 }
